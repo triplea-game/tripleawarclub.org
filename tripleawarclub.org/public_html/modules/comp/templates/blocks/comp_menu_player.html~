@@ -1,0 +1,18 @@
+{php}
+if($joinedToSomething==true){
+echo "hello world";
+}
+{/php}
+
+<{if $ladder.is_joinedToSomething == true}>
+<ul id="player">
+<li><a class="playermenu" href="<{$smarty.const.XOOPS_URL}>/modules/comp/profile.php?uid=<{$xoops_userid}>"><{$smarty.const._COMP_BLOCK_PROFILE}></a></li>
+<li><a class="playermenu" href="<{$smarty.const.XOOPS_URL}>/modules/comp/challenges.php?uid=<{$xoops_userid}>"><{$smarty.const._COMP_BLOCK_MY_CHALLENGES}></a></li>
+<li><a class="playermenu" href="<{$smarty.const.XOOPS_URL}>/modules/comp/matches.php?op=search&uid=<{$xoops_userid}>"><{$smarty.const._COMP_BLOCK_FIND_OPPONENTS}></a></li>
+<li><a class="playermenu" href="<{$smarty.const.XOOPS_URL}>/modules/comp/matches.php?op=report&uid=<{$xoops_userid}>"><{$smarty.const._COMP_BLOCK_REPORT_MATCH}></a></li>
+<li><a class="playermenu" href="<{$smarty.const.XOOPS_URL}>/modules/comp/rating.php?op=rate"><{$smarty.const._COMP_BLOCK_RATE_PLAYER}></a></li>
+<{if $ladder.is_admin == true}>
+<li><a class="adminmenu" href="<{$smarty.const.XOOPS_URL}>/modules/comp/ladderadmin.php">Admin</a></li>
+<{/if}>
+</ul>	
+<{/if}>

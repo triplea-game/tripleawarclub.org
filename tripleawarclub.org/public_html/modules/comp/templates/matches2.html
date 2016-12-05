@@ -1,0 +1,44 @@
+<h2 class="siteheader"><{$params.name|capitalize}> Ladder</h2>
+
+<p>Below is a listing of all played matches.</p><br>
+
+<table class="outer">
+<tr>
+<td colspan="4">
+
+	<table border=0 cellpadding=0 cellspacing=0>
+	<tr><td>
+		<h3 class="comp"><{$smarty.const._COMP_GAMES_PLAYED|capitalize}></h3>
+	</td><td width="250" style="text-align:right">
+		<form action="matches.php" method="GET">
+		<{* Page selection drop down box *}>
+		<{$smarty.const._COMP_PAGE|capitalize}>:
+		<select name="pagenum" size="1">
+			<{section name=pagenumsection start=1 loop=$params.num_pages+1}>
+				<option value="<{$smarty.section.pagenumsection.index}>">
+				<{$smarty.section.pagenumsection.index}></option>
+			<{/section}>
+		</select>
+
+		<{* Players per page selection box *}>
+		<{$smarty.const._COMP_MATCHES_PER_PAGE|capitalize}>:
+		<select name="mppg" size = "1">
+			<option value="20">20</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+			<option value="0">All</option>
+		</select>
+		<input type="hidden" name="lid" value="<{$params.comp_id}>">
+		<input type="submit" value="<{$smarty.const._COMP_SUBMIT|capitalize}>">
+		</form>
+	</td></tr></table>
+
+</td>
+</tr>
+<tr>
+<th>Match ID </th>
+<th style="text-align:left;">Players</th>
+<th>Results</th>
+<th>Date</th>
+</tr>
+</table>

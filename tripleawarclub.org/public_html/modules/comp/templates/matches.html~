@@ -1,0 +1,78 @@
+<h2 class="siteheader"><{$params.name|capitalize}></h2>
+
+<p>Below is a listing of all played matches.</p><br>
+
+<table class="outer">
+<tr>
+
+<{if $params.comp_id==6}>
+<td colspan="10">
+<{else}>
+<td colspan="7">
+<{/if}>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td>
+<h3 class="comp"><{$smarty.const._COMP_MATCHES_PLAYED|capitalize}></h3>
+</td><td width="250" style="text-align:right">
+<form action="matches.php" method="GET">
+<{* Page selection drop down box *}>
+<{$smarty.const._COMP_PAGE|capitalize}>:
+<select name="pagenum" size="1">
+	<{section name=pagenumsection start=1 loop=$params.num_pages+1}>
+		<option value="<{$smarty.section.pagenumsection.index}>">
+		<{$smarty.section.pagenumsection.index}></option>
+	<{/section}>
+</select>
+
+<{* Players per page selection box *}>
+<{$smarty.const._COMP_MATCHES_PER_PAGE|capitalize}>:
+<select name="mppg" size = "1">
+	<option value="20">20</option>
+	<option value="50">50</option>
+	<option value="100">100</option>
+	<option value="0">All</option>
+</select>
+<input type="hidden" name="lid" value="<{$params.comp_id}>">
+<input type="submit" value="<{$smarty.const._COMP_SUBMIT|capitalize}>">
+</form>
+</td></tr></table>
+
+</td>
+</tr>
+<tr>
+<th>ID</th>
+
+<{if $params.comp_id==6}>
+<th>Map</th>
+<th>NOs</th>
+<th>Luck</th>
+<{/if}>
+
+<th colspan=2>Opponent</th>
+<th>As Allies</th>
+<th>As Axis</th>
+<th>Rating Change</th>
+<th>Date</th>
+</tr>
+	<{foreach item=match from=$params.matches name=matchinfo key=k}>
+		<tr class="<{cycle values=even,odd}>_comp">
+			<td><{$k}></td>
+			<{if $params.comp_id==6}>
+			<td><{$match.map}></td>
+			<td><{$match.nos}></td>
+			<td><{$match.luck}></td>
+			<{/if}>
+			<td class="country">
+			<img style="vertical-align:middle" src="images/flags/<{$match.opponent_country|lower}>.gif" alt="<{$match.opponent_country}>">
+			</td>
+			<td class="players">		
+				<a href="profile.php?uid=<{$match.opponent_id}>"><{$match.opponent_uname}></a>
+			</td>
+			<td><{$match.allies_result}></td>
+			<td><{$match.axis_result}></td>
+			<td><{$match.ratingchange}></td>
+			<td><{$match.match_date|date_format}></td>
+		</tr>
+	<{/foreach}>
+</table>

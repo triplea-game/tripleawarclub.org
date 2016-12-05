@@ -1,0 +1,28 @@
+<td style="vertical-align:middle">
+	<{if $local_status==0}>
+	<a href="matches.php?lid=<{$comp_id}>&uid=<{$uid}>&side=<{$side}>">
+	<{/if}>
+		<table><tr>
+			<td style="border:none;background-color:
+			<{if $side == "both"}>
+				blue
+			<{elseif $side == "axis"}>
+				grey
+			<{else}>
+				green
+			<{/if}>;width:<{$winpercent}>px;padding:0px"></td>
+
+			<td style="border:none;background-color:
+			<{if $side == "both"}>
+				lightblue
+			<{elseif $side == "axis"}>
+				lightgrey
+			<{else}>
+				lightgreen
+			<{/if}>;width:<{$losspercent}>px;padding:0px"></td>
+
+			<td style="border:none;text-align:center;padding:0px;font-size:10px;"><{$winpercent}>%<br>(<{$wins}> <{$smarty.const._COMP_OF}> <{$matches}>)</td>
+		</tr></table>
+		<{if $local_status==0}></a><{/if}>
+	
+</td>

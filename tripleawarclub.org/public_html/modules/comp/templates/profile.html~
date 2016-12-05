@@ -1,0 +1,254 @@
+<{* Profile/posts table *}>
+
+<h2 class="siteheader"><{$params.profile.uname}>'s <{$smarty.const._COMP_PROFILE|capitalize}></h2>
+<br/>
+<table bgcolor="#FFFFFF"><tr>
+
+	<{* Profile subtable *}>
+	<td style="width:75%"><table class="outer">
+	<tr>
+		<td colspan="2">
+		
+		<h3 class="comp">
+		Player Information
+		<{if $params.profile.uid == $xoops_userid}>
+			[<a href="<{$smarty.const.XOOPS_URL}>/edituser.php?uid=<{$params.profile.uid}>&lid=<{$smarty.get.lid}>&ref=comp"><{$smarty.const._COMP_EDIT|capitalize}></a>]
+		<{/if}>
+		</h3>
+		
+		</td>
+	</tr>
+
+	<tr>
+		<{* Avatar and country flag *}>
+		<td style="width:70px;text-align:center;font-size:11px;">
+		<img style="width:64px" src="<{$smarty.const.XOOPS_URL}>/uploads/<{$params.profile.user_avatar}>" ><br>
+		[<a href="http://www.tripleawarclub.org/edituser.php?op=avatarform&lid=<{$smarty.get.lid}>&ref=comp">Edit</a>]
+		</td>
+
+		<{* General info subsubtable *}>
+		<td style="border-right:1px dotted #d7863e;"><table>
+		<{if $xoops_isuser}>
+			<tr class="even"><td><{$smarty.const._COMP_EMAIL}></td><td>
+			<{if $params.profile.user_viewemail || ($params.profile.uid == $xoops_userid)}>
+				<a href="mailto:<{$params.profile.email}>"><{$params.profile.email}></a>
+			<{/if}>
+			</td>
+			</tr>
+			<tr class="odd"><td><{$smarty.const._COMP_HOMEPAGE|capitalize}></td><td><a href="<{$params.profile.url}>" target="_blank"><{$params.profile.url}></a></td></tr>
+			<tr class="even"><td><{$smarty.const._COMP_ICQ}></td><td><{$params.profile.user_icq}></td></tr>
+			<tr class="odd"><td><{$smarty.const._COMP_AIM}></td><td><{$params.profile.user_aim}></td></tr>
+			<tr class="even"><td><{$smarty.const._COMP_YAHOO}></td><td><{$params.profile.user_yim}></td></tr>
+			<tr class="odd"><td><{$smarty.const._COMP_MSN}></td><td><{$params.profile.user_msnm}></td></tr>
+			<tr class="even"><td><a href='#' onclick='javascript:openWithSelfMain("<{$smarty.const.XOOPS_URL}>/pmlite.php?send2=1&amp;to_userid=<{$params.profile.uid}>","pmlite",450,380);'><img src="<{$smarty.const.XOOPS_URL}>/images/icons/pm.gif"></a></td><td>Send a Private Message</td></tr>
+		<{/if}>
+		<tr class="odd">
+			<td><{$smarty.const._COMP_COUNTRY|capitalize}></td>
+			<td><img src="images/flags/<{$params.profile.country|lower}>.gif" alt="<{$params.profile.country_name}>"> <{$params.profile.country_name}>
+				<{if $params.profile.uid == $xoops_userid}>
+					[<a href="editglobalprofile.php?uid=<{$params.profile.uid}>"><{$smarty.const._COMP_EDIT|capitalize}></a>]
+				<{/if}>
+			</td>
+		</tr>
+		<tr class="even"><td style="width:10%"><{$smarty.const._COMP_JOINED|capitalize}></td><td><{$params.profile.user_regdate|date_format}></td></tr>
+		<tr class="odd">
+			<td><{$smarty.const._COMP_PLAYER_KARMA|capitalize}></td>
+			<td style="vertical-align:middle">
+				<{$params.profile.karma_rating}>%
+				(+<{$params.profile.num_positive}>, <{$params.profile.num_neutral}>,-<{$params.profile.num_negative}>)
+			</td>
+		</tr>
+		<tr class="even">
+			<td><{$smarty.const._COMP_STATUS|capitalize}></td>
+			<{if $params.profile.status == 0 }>
+				<td style="color:green"><{$smarty.const._COMP_STATUS_ACTIVE|capitalize}>
+			<{elseif $params.profile.status == 1 }>
+				<td style="color:red"><{$smarty.const._COMP_STATUS_INACTIVE|capitalize}>
+			<{/if}>
+			<{if $params.profile.uid == $xoops_userid}>
+				[<a href="editglobalprofile.php?uid=<{$params.profile.uid}>"><{$smarty.const._COMP_EDIT|capitalize}></a>]
+			<{/if}>
+			</td>
+		</tr>
+		<{if $params.profile.status == 1 }>
+			<tr class="odd"><td>Return Date</td><td><{$params.profile.return_date|date_format}></td></tr>
+		<{/if}>
+		</table></td>
+	</tr>
+	</table></td>
+
+	<{* Posts subtable *}>
+	<td><table class="outer">
+		<tr><td><h3 class="comp">Recent Posts</h3></td></tr>
+		
+		<{foreach from=$params.posts key=myId item=i}>
+			<tr><td class="recent_post">
+			<a href="<{$smarty.const.XOOPS_URL}>/modules/newbb/viewtopic.php?forum=<{$i.forum_id}>&post_id=<{$i.post_id}>#forumpost<{$i.post_id}>"><{$i.subject}></a>
+			<br>
+			<i>Posted <{$i.post_time|date_format}></i>
+			</td></tr>
+		<{/foreach}>
+
+	</table></td>
+</tr></table>
+
+<br>
+
+<{* Competition tables *}>
+
+<h3 class="comp"><{$smarty.const._COMP_COMPETITIONS|capitalize}></h3>
+
+<table>
+
+	<{* Individual competition subtables *}>
+	<{foreach item=comp from=$params.profile.competitions}>
+		<tr><td><br/><table class="outer">
+			<tr><th colspan="2" style="text-align:left;padding-left:5px;"><{$comp.comp_name|capitalize}>
+			</th></tr>
+
+			<tr>
+			<{* Competition information subsubtable *}>
+			<td style="width:50%"><table>
+				<tr class="odd">
+					<td style="width:40%"><{$smarty.const._COMP_CHALLENGESLOT|capitalize}></td>
+					<{if $comp.challengeslot == 0}>
+						<td><span style="color:green"><{$smarty.const._COMP_CHALLENGESLOT_OPEN|capitalize}>
+					<{elseif $comp.challengeslot == 1}>
+						<td><span style="color:red"><{$smarty.const._COMP_CHALLENGESLOT_CLOSED|capitalize}>
+					<{/if}></span><{if $params.profile.uid == $xoops_userid}>
+				[<a href="editlocalprofile.php?uid=<{$comp.xoops_user_id}>&lid=<{$comp.comp_id}>"><{$smarty.const._COMP_EDIT|capitalize}></a>]
+			<{/if}>
+					</td>
+				</tr>
+				<tr class="even"><td><{$smarty.const._COMP_POINTS|capitalize}> (<{$smarty.const._COMP_RANK|capitalize}>)</td><td><{$comp.rating}> (<{$comp.rank}>)</td></tr>
+				<tr class="odd">
+					<td style="vertical-align:middle"><{$smarty.const._COMP_RULES|capitalize}></td>
+					<td><ul>
+						<{foreach item=rule from=$comp.options.rules}>
+							<li><{$rule.desc}></li>
+						<{/foreach}>	
+					</ul></td>
+				</tr>
+				<{if $comp.comp_id==6}>
+				<tr class="even">
+					<td style="vertical-align:middle"><{$smarty.const._COMP_MAP|capitalize}></td>
+					<td><ul>
+						<{foreach item=map from=$comp.options.map}>
+							<li><{$map.desc}></li>
+						<{/foreach}>
+					</ul></td>
+				</tr>
+				<tr class="even">
+					<td style="vertical-align:middle"><{$smarty.const._COMP_NOS|capitalize}></td>
+					<td><ul>
+						<{foreach item=nos from=$comp.options.nos}>
+							<li><{$nos.desc}></li>
+						<{/foreach}>
+					</ul></td>
+				</tr>
+				<{/if}>
+				<tr class="odd">
+					<td style="vertical-align:middle"><{$smarty.const._COMP_LUCK|capitalize}></td>
+					<td><ul>
+						<{foreach item=luck from=$comp.options.luck}>
+							<li><{$luck.desc}></li>
+						<{/foreach}>
+					</ul></td>
+				</tr>
+				<tr class="even">
+					<td style="vertical-align:middle"><{$smarty.const._COMP_MODE|capitalize}></td>
+					<td><ul>
+						<{foreach item=mode from=$comp.options.mode}>
+							<li><{$mode.desc}></li>
+						<{/foreach}>
+					</ul></td>
+				</tr>
+				<tr class="odd">
+				<td> </td><td>
+				<{if $params.profile.uid == $xoops_userid}>
+				[<a href="editlocalprofile.php?uid=<{$comp.xoops_user_id}>&lid=<{$comp.comp_id}>">Edit your Rules/Options</a>]
+				<{/if}><br></td>
+				</tr>
+				<tr class="even">
+					<td style="vertical-align:middle"><{$smarty.const._COMP_RECORD|capitalize}></td>
+					<{include file="file:$xoops_rootpath/modules/comp/templates/record.html"
+						comp_id=$comp.comp_id
+						uid=$comp.xoops_user_id
+						side="both"
+						wins=$comp.wins
+						matches=$comp.matches
+						winpercent=$comp.winpercent
+						losspercent=$comp.losspercent}>
+				</tr>
+				<tr class="odd">
+					<td style="vertical-align:middle"><{$smarty.const._COMP_AXISRECORD|capitalize}></td>
+					<{include file="file:$xoops_rootpath/modules/comp/templates/recordhalf.html"
+						comp_id=$comp.comp_id
+						uid=$comp.xoops_user_id
+						side="axis"
+						wins=$comp.axiswins
+						matches=$comp.axismatches
+						winpercent=$comp.axiswinpercent
+						losspercent=$comp.axislosspercent}>
+				</tr>
+				<tr class="even">
+					<td style="vertical-align:middle"><{$smarty.const._COMP_ALLIESRECORD|capitalize}></td>
+					<{include file="file:$xoops_rootpath/modules/comp/templates/recordhalf.html"
+						comp_id=$comp.comp_id
+						uid=$comp.xoops_user_id
+						side="allies"
+						wins=$comp.allieswins
+						matches=$comp.alliesmatches
+						winpercent=$comp.allieswinpercent
+						losspercent=$comp.allieslosspercent}>
+				</tr>
+				<tr class="odd">
+					<td><{$smarty.const._COMP_STREAK|capitalize}></td>
+					<{if $comp.streakwins > 0 }><td style="color:green"><{$comp.streakwins}>
+					<{elseif $comp.streaklosses > 0 }><td style="color:red">-<{$comp.streaklosses}>
+					<{else}><td>0
+					<{/if}>
+					</td>
+				</tr>
+				<tr class="even"><td><{$smarty.const._COMP_LONGEST|capitalize}> <{$smarty.const._COMP_STREAK|capitalize}> <{$smarty.const._COMP_WINS|capitalize}> / <{$smarty.const._COMP_LOSSES|capitalize}></td><td><{$comp.longest_winstreak}> / <{$comp.longest_lossstreak}></td></tr>
+				<tr class="odd"><td><{$smarty.const._COMP_POINTS|capitalize}> <{$smarty.const._COMP_MAX|capitalize}> / <{$smarty.const._COMP_MIN|capitalize}></td><td><{$comp.highest_rating}> / <{$comp.lowest_rating}></td></tr>
+			</table></td>
+
+			<{* Recent matches subsubtable *}>
+			<td style="padding-top:5px;">
+			<h3 class="comp">Recent Games [<a href="matches.php?uid=<{$comp.xoops_user_id}>&lid=<{$comp.comp_id}>" class="viewAll">View All</a>]</h3>
+			<table class="outer" style="text-align:center;">
+				<tr><th>Winner</th><th>Loser</th><th>Winning Side</th><th>Date</th></tr>
+				<{section name=match loop=$comp.played_matches max=5}>
+					<tr class="<{cycle values=even,odd}>">
+						<td><{$comp.played_matches[match].winner_name}></td>
+						<td><{$comp.played_matches[match].loser_name}></td>
+						<td><{$comp.played_matches[match].side_name}></td>
+						<td><{$comp.played_matches[match].match_date|date_format}></td>
+					</tr>
+				<{/section}>
+			</table>
+			<br>
+			<{* Current challenges subsubtable *}>
+
+			<h3 class="comp">Current Challenges [<a href="challenges.php?uid=<{$comp.xoops_user_id}>&lid=<{$comp.comp_id}>" class="viewAll">View All</a>]</h3>
+			<table class="outer" style="text-align:center;">
+				<tr><th>Challenger</th><th>Challenged</th><th>Challenge Date</th></tr>
+				<{section name=chall loop=$comp.challenges max=5}>
+					<tr class="<{cycle values=even,odd}>">
+						<td><{$comp.challenges[chall].challenger_name}></td>
+						<td><{$comp.challenges[chall].challenged_name}></td>
+						<td><{$comp.challenges[chall].chall_date|date_format}></td>
+					</tr>
+				<{/section}>
+			</table></td>
+			</tr>
+		</table></td></tr>
+	<{/foreach}>
+</table>
+<br>
+<{* Ratings Table *}>
+<h3 class="comp"><{$smarty.const._COMP_KARMA|capitalize}> <{$smarty.const._COMP_RATINGS|capitalize}> [<a href="rating.php?uid=<{$params.profile.uid}>"><{$smarty.const._COMP_VIEW_ALL|capitalize}></a>]</h3>
+<table>
+		<{include file="file:$xoops_rootpath/modules/comp/templates/ratings_table.html" params=$params max=5}>
+</table>

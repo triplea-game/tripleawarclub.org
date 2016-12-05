@@ -1,0 +1,16 @@
+<div id="navOptionsCP">
+    <div class="modname">
+        <{$modname}>
+    </div>
+    <{foreach item=op from=$mod_options}>
+    <a class="tooltip" href="<{$op.link}>" title="<{$op.title}>">
+        <img src='<{$op.icon|default:"$theme_icons/icon_options.png"}>' alt="<{$op.title}>" />
+    </a>
+    <{/foreach}>
+
+    <{if $moddir!='system' && $mod_options}>
+    <a class="tooltip" href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&amp;op=showmod&amp;mod=<{$modid}>" title="<{$smarty.const._MD_AM_PREF}>">
+        <img src="<{$theme_icons}>/prefs.png" alt="<{$smarty.const._MD_AM_PREF}>" />
+    </a>
+    <{/if}>
+</div>

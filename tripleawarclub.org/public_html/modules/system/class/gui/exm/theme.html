@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<{includeq file="$theme_tpl/xometas.html"}>
+<{includeq file="$theme_tpl/xoscripts.html"}>
+</head>
+<body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
+<{includeq file="$theme_tpl/system_adm_navbar.html"}>
+<div id="containBodyCP"><br /><div id="bodyCP">
+<{if $modules}><{includeq file="$theme_tpl/system_indexcp.html"}><{/if}>
+<{if $xoops_contents}><div id="xo-content"><{$xoops_contents}></div><{/if}>
+<{includeq file="$theme_tpl/system_adm_footer.html"}>
+</body>
+</html>

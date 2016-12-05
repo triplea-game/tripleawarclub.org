@@ -1,0 +1,190 @@
+<div class="breadcrumb"><{$breadcrumb}></div>
+
+<table cellpadding="0" cellspacing="0" class="item">
+    <tr class="itemHead" style="line-height: 200%;">
+        <td class="itemTitle">
+			<{if $story.friendlyurl_enable != 1}>
+            &nbsp;<a href='<{$xoops_url}>/modules/AMS/article.php?storyid=<{$story.id}>'><{$story.title}></a>
+			<{else}>
+            &nbsp;<a href="<{$story.friendlyurl}>"><{$story.title}></a>
+			<{/if}>
+		
+            <{$smarty.const._POSTEDBY}> <{$story.poster}>
+            <{$smarty.const._ON}> <{$story.posttime}>
+            <{$story.version}>.<{$story.revision}><{$story.revisionminor}>
+        </td>
+    </tr>
+    <tr class="itemBody">
+        <td class="itemText">
+            <{$story.hometext}>
+        </td>
+    </tr>
+</table>
+
+<{if $message}>
+    <div class="errorMsg"><{$message}></div>
+<{/if}>
+
+<{if $results}>
+<!--Search Results-->
+  <form name="linkform" id="linkform" action="<{$search_form.action}>" method="POST">
+    <table>
+        <tr>
+            <th colspan="3">
+                <{$smarty.const._AMS_NW_SEARCHRESULTS}>
+            </th>
+        </tr>
+        <{counter start=0 print=false assign=linkcount}>
+        <{foreach item=thismodule from=$results}>
+            <tr class="head">
+                <td colspan="2"><{$thismodule.modulename}></td>
+            </tr>
+            <{foreach item=user from=$thismodule.results}>
+                <{foreach item=result from=$user}>
+                    <tr class="<{cycle values="odd, even"}>">
+                        <td>
+                            <input type="checkbox" name="linkids[<{$linkcount}>]" value="<{$linkcount}>" />
+                            <input type="hidden" name="links[<{$linkcount}>]" value="<{$result.link}>" />
+                            <input type="hidden" name="modules[<{$linkcount}>]" value="<{$thismodule.moduleid}>" />
+                            <input type="hidden" name="titles[<{$linkcount}>]" value="<{$result.title}>" />
+                        </td>
+                        <td><a href='<{$xoops_url}>/modules/<{$thismodule.dirname}>/<{$result.link}>' target="_blank"><{$result.title}></a></td>
+                    </tr>
+                    <{counter}>
+                <{/foreach}>
+            <{/foreach}>
+        <{/foreach}>
+        <tr class="odd">
+            <td>
+                <{$smarty.const._AMS_NW_LINKTYPE}>
+            </td>
+            <td>
+                <input type="radio" name="position" value="top" /><{$smarty.const._AMS_NW_PREREQUISITEARTICLES}>
+                <input type="radio" name="position" value="bottom" checked="checked" /><{$smarty.const._AMS_NW_RELATEDARTICLES}>
+            </td>
+        </td>
+        <tr class="foot">
+            <td colspan="2">
+                <input type="hidden" name="op" value="addlink" />
+                <input type="hidden" name="storyid" value="<{$story.id}>" />
+                <input type="submit" name="submit" value="<{$smarty.const._AMS_NW_ADDLINK}>">
+            </td>
+        </tr>
+    </table>
+  </form>
+<{/if}>
+<form name="urllinkform" id="urllinkform" action="<{$search_form.action}>" method="POST">
+    <table>
+        <tr>
+            <th colspan="2">
+                <{$smarty.const._AMS_NW_ADDEXTERNALLINK}>
+            </th>
+        </tr>
+        <tr class="odd">
+            <td>
+                <{$smarty.const._AMS_NW_TITLE}>
+            </td>
+            <td>
+                <input type="text" value="" name="title" />
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                <{$smarty.const._AMS_NW_URL}>
+            </td>
+            <td>
+                <input type="text" value="http://" name="url" />
+            </td>
+        </tr>
+        <tr class="odd">
+            <td>
+                <{$smarty.const._AMS_NW_LINKTYPE}>
+            </td>
+            <td>
+                <input type="radio" name="position" value="top" /><{$smarty.const._AMS_NW_PREREQUISITEARTICLES}>
+                <input type="radio" name="position" value="bottom" checked="checked" /><{$smarty.const._AMS_NW_RELATEDARTICLES}>
+            </td>
+        </td>
+        <tr class="foot">
+            <td colspan="2">
+                <input type="hidden" name="op" value="addexternallink" />
+                <input type="hidden" name="storyid" value="<{$story.id}>" />
+                <input type="submit" name="submit" value="<{$smarty.const._AMS_NW_ADDEXTERNALLINK}>">
+            </td>
+        </tr>
+    </table>
+</form>
+<!--Search Form-->
+<form name="<{$search_form.name}>" id="<{$search_form.name}>" action="<{$search_form.action}>" method="<{$search_form.method}>" <{$search_form.extra}>>
+    <table class="outer" cellspacing="0">
+    <tr>
+        <th colspan="2">
+            <{$smarty.const._SR_SEARCH}>
+        </th>
+    </tr>
+    <!-- start of form elements loop -->
+    <{foreach item=element from=$search_form.elements}>
+        <{if $element.hidden != true}>
+            <tr valign="top">
+                <td class="odd"><{$element.caption}></td>
+                <td class="even"><{$element.body}></td>
+            </tr>
+        <{else}>
+            <{$element.body}>
+        <{/if}>
+    <{/foreach}>
+    <!-- end of form elements loop -->
+    </table>
+</form>
+<!--Existing Links-->
+<{if $related && $related.top}>
+<form name="linkform" id="linkform" action="<{$search_form.action}>" method="POST">
+    <table>
+        <tr>
+            <th colspan="3">
+                <{$smarty.const._AMS_NW_PREREQUISITEARTICLES}>
+            </th>
+        </tr>
+        <{foreach item=link from=$related.top}>
+            <tr>
+                <td class="head"><input type="checkbox" name="linkids[]" value="<{$link.linkid}>" /></td>
+                <td class="head"><{$link.link_module}></td>
+                <td class="<{cycle values="odd, even"}>"><a href='<{$link.link_link}>' target="_blank"><{$link.link_title}></a></td>
+            </tr>
+        <{/foreach}>
+        <tr class="foot">
+            <td colspan="3">
+                <input type="hidden" name="op" value="dellink" />
+                <input type="hidden" name="storyid" value="<{$story.id}>" />
+                <input type="submit" name="submit" value="<{$smarty.const._AMS_NW_DELLINK}>">
+            </td>
+        </tr>
+    </table>
+</form>
+<{/if}>
+
+<{if $related && $related.bottom}>
+<form name="linkform" id="linkform" action="<{$search_form.action}>" method="POST">
+    <table>
+        <tr>
+            <th colspan="3">
+                <{$smarty.const._AMS_NW_RELATEDARTICLES}>
+            </th>
+        </tr>
+        <{foreach item=link from=$related.bottom}>
+            <tr>
+                <td class="head"><input type="checkbox" name="linkids[]" value="<{$link.linkid}>" /></td>
+                <td class="head"><{$link.link_module}></td>
+                <td class="<{cycle values="odd, even"}>"><a href='<{$link.link_link}>' target="_blank"><{$link.link_title}></a></td>
+            </tr>
+        <{/foreach}>
+        <tr class="foot">
+            <td colspan="3">
+                <input type="hidden" name="op" value="dellink" />
+                <input type="hidden" name="storyid" value="<{$story.id}>" />
+                <input type="submit" name="submit" value="<{$smarty.const._AMS_NW_DELLINK}>">
+            </td>
+        </tr>
+    </table>
+</form>
+<{/if}>

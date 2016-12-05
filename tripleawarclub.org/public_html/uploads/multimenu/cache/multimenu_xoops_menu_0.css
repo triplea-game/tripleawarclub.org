@@ -1,0 +1,37 @@
+div#mainmenu  {
+  width: 160px; 
+}
+
+div#mainmenu a {
+  background-color: #e6e6e6; 
+  display: block; 
+  margin: 0; 
+  padding: 4px; 
+}
+
+div#mainmenu a:hover {
+  background-color: #ffffff;
+}
+
+div#mainmenu a.menuTop {
+  padding-left: 3px; 
+  border-top: 1px solid #c0c0c0; 
+  border-right: 1px solid #666666; 
+  border-bottom: 1px solid #666666; 
+  border-left: 1px solid #c0c0c0; 
+}
+
+div#mainmenu a.menuMain {
+  padding-left: 3px; 
+  border-right: 1px solid #666666; 
+  border-bottom: 1px solid #666666; 
+  border-left: 1px solid #c0c0c0;
+}
+
+div#mainmenu a.menuSub {
+  background-color: #f6f6f6; 
+  padding-left: 9px; 
+  border-right: 1px solid #666666; 
+  border-bottom: 1px solid #666666; 
+  border-left: 1px solid #c0c0c0;
+}

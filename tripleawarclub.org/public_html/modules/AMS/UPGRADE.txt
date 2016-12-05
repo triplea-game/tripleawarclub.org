@@ -1,0 +1,34 @@
+UPGRADING INSTRUCTIONS:
+
+Upgrade from AMS 2.41/AMS 2.42/AMS 2.50 Final/AMS 2.51 Final/AMS 2.52 Final
+============================================================================================
+1)click administrator->system admin->modules->AMS update (for XOOPS, it is box with green dot)
+2)do that one more time : click administrator->system admin->modules->AMS update (for XOOPS, it is box with green dot)
+3)go to administrator->AMS->preference. If you already have XOOPS EDITOR and phpp Framework, just press submit without changing anything (it is a MUST to update the database).
+4)If you don't have XOOPS EDITOR please change this:
+   EDITOR : change to DHTML
+   EDITOR CHOICES : select DHTML only
+   ENABLE EDITOR CHOICE TO USER : No (just for to be safe. Not really needed)
+   Then press submit.
+5) Clear your_xoops/cache, your_xoops/templates_c and your_xoops/xoops_data/caches (Xoops 2.3.x/2.4.x only)
+
+
+Upgrade from AMS 2.2
+====================
+1) Upload all files in this package - overwrite existing files
+2) Log in to the site
+3) Point your browser to modules/AMS/upgrade
+4) Select "Update module" - you will be passed on to the module administration's update, but an update script will have run prior to that, so it is important not just going to modules administration and then updating (this is a one-time database update, so if you update the module later, e.g. after changing the templates, you will not need to update the module through here)
+
+In order to import topics, articles, permissions, comments and attachments from an existing News module
+1) Log in as administrator to the site
+2) Go to [yoursite]/modules/AMS/upgrade
+3) Follow instructions on screen
+NOTE: If you decide to import comments from News, they WILL NO LONGER BE IN THE NEWS MODULE. 
+Comments are moved - NOT copied
+
+Thank you
+
+Jan Keller Pedersen A.K.A Mithrandir
+email: jkp@web-udvikling.dk
+web: www.web-udvikling.dk

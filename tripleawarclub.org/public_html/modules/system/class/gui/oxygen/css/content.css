@@ -1,0 +1,160 @@
+h1 {	font-size: 20px;}
+
+h2 {	font-size: 18px;}
+
+h3 {	font-size: 16px;}
+
+h4 {	font-size: 14px;}
+
+/* ==================== Code and Quote Definition ==================== */
+.xoopsCode {
+	font-size: 11px;
+	color: #006600;
+	background-color: #FAFAFA;
+	border: #c2cdd6 1px dashed;
+}
+
+.xoopsQuote {
+	font-size: 11px;
+	color: #444;
+	line-height: 125%;
+	text-align: justify;
+	background-color: #FAFAFA;
+	border: #c2cdd6 1px dashed;
+}
+
+/* ==================== Links for Quotes ==================== */
+.xoopsQuote a:link,.xoopsQuote a:visited {
+	color: #444;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+.xoopsQuote a:hover,.xoopsQuote a:active {
+	color: #1778cb;
+	background-color: transparent;
+}
+
+/* ==================== Redirect messages ==================== */
+.errorMsg {
+	background: #FBE3E4;
+	color: #D12F19;
+	text-align: center;
+	border: 2px solid #FBC2C4;
+	padding: 8px;
+	font-weight: bold;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.confirmMsg {
+	background-color: #FFF09B;
+	color: #FF4500;
+	text-align: center;
+	border: 1px solid #FFD700;
+	font-weight: bold;
+	width: 80%;
+	margin: 0 auto;
+	padding: 8px;
+}
+
+/* ==================== For redirect pages ====================*/
+.message,.notreload {	text-align: center;}
+
+/* ==================== General small ==================== */
+.fontSmall {
+	font-size: 10px;
+	background-color: transparent;
+}
+
+a.fontSmall {	color: #006699;}
+
+a.fontSmall:hover {
+	color: #C23030;
+	text-decoration: underline;
+}
+
+/*==================== forms elements ==================== */
+input,textarea,select {
+	border: 1px solid #ccc;
+	font-size: 11px;
+	font-family: tahoma, Helvetica, sans-serif;
+	background-color: #fff;
+}
+
+input:focus,textarea:focus,select:focus {	border: 1px solid #999999;}
+
+table {	width: 100%;}
+
+th {
+	background-color: #2e323b;
+	color: #fff;
+	padding: 4px;
+	vertical-align: middle;
+}
+
+.outer {
+	width: 100%;
+	border: 2px solid #ccc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	margin: 5px;
+}
+
+.head {
+	background-color: #AFAFAF;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.even {
+	background-color: #EFEFEF;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.odd {
+	background-color: #DFDFDF;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.foot {
+	background-color: #E1E7EF;
+	padding: 5px;
+	font-weight: bold;
+}
+
+tr.head td {
+	background-color: #BDE3FB;
+	padding: 5px;
+	font-weight: bold;
+}
+
+tr.even td {
+	background-color: #fff;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+tr.odd td {
+	background-color: #EFEFEF;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+tr.foot td {
+	background-color: #E1E7EF;
+	padding: 5px;
+	font-weight: bold;
+}
+/*============= XOOPS Editors =============*/
+body.mceContentBody {
+	background-color: 			#fff;
+	background-image: 			none;
+	color: 						#333;
+}

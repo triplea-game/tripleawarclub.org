@@ -1,0 +1,57 @@
+/* Main links */
+
+li.multimenu_tooltip {
+   display:inline;
+   border: 1px outset Black;
+   background: White;
+   width:170px;
+}
+
+li.multimenu_tooltip a {
+  cursor:pointer;
+  padding: 6px;
+  margin: 5px;
+}
+
+
+
+/* Sublinks */
+
+li.multimenu_tooltip em {
+   display:none;
+   border: 1px outset Black;
+   background: White;
+   width:170px;
+}
+
+li.multimenu_tooltip:hover {
+  position: relative;
+  z-index: 500;
+  background: LightGrey;
+  border: 1px outset Black;
+  background: White;
+  width:170px;
+}
+
+li.multimenu_tooltip:hover em {
+   font-style: normal;
+   display: block;
+   position: absolute;
+   top: 16px;
+   left: 0px;
+   padding: 3px 0.5em;
+   width:170px;
+}
+
+/*top picture*/
+li.multimenu_tooltip:hover em span {
+   position: absolute;
+   top: -7px;
+   left: 15px;
+   height: 16px;
+   width: 160px;
+   background: transparent url('{xoops_url}/modules/multimenu/templates/include/multimenu_css_horizontal/arrow_up.gif') no-repeat;
+   margin:0;
+   padding: 0;
+   border: 0;
+}

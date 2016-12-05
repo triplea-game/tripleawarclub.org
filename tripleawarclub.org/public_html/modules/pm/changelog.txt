@@ -1,0 +1,5 @@
+Version 1.03
+-------------------
+- Improved preloads for reducing queries
+- Security fix: In the readpmsg.php file the op parameter is not sanitized before
+output (thanks to secunia.com)

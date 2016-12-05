@@ -1,0 +1,123 @@
+<h2 class="siteheader">Challenges</h2>
+<p>Below is the list of all active and completed challenges.</p>
+<p>Looking to <a href="matches.php?op=search&lid=<{$params.comp_id}>">find an opponent</a>? To have a challenge deleted, please <a href="http://www.tripleawarclub.org/modules/newbb/viewforum.php?forum=<{$params.comp_id}>">post here</a>.</p>
+<br>
+<table class="outer">
+	<tr>
+		<{if $params.isPlayer==true}>
+		<td colspan="11">
+		<{else}>
+		<td colspan="8">
+		<{/if}>
+		
+		<table border=0 cellpadding=0 cellspacing=0>
+<tr><td>
+<h3 class="comp"><{$smarty.const._COMP_CHALLENGES|capitalize}></h3>
+</td><td width="275" style="text-align:right">
+<form action="challenges.php" method="GET">
+<{* Page selection drop down box *}>
+<{$smarty.const._COMP_PAGE|capitalize}>:
+<select name="pagenum" size="1">
+	<{section name=pagenumsection start=1 loop=$params.num_pages+1}>
+		<option value="<{$smarty.section.pagenumsection.index}>">
+		<{$smarty.section.pagenumsection.index}></option>
+	<{/section}>
+</select>
+
+<{* Players per page selection box *}>
+<{$smarty.const._COMP_CHALLENGES_PER_PAGE|capitalize}>:
+<select name="cppg" size = "1">
+	<option value="20">20</option>
+	<option value="50">50</option>
+	<option value="100">100</option>
+	<option value="0">All</option>
+</select>
+<input type="hidden" name="lid" value="<{$params.comp_id}>">
+<{if $params.isPlayer==true}>
+<input type="hidden" name="uid" value="<{$params.user_id}>">
+<{/if}>
+<input type="submit" value="<{$smarty.const._COMP_SUBMIT|capitalize}>">
+</form>
+</td></tr>
+</table>
+		
+		</td>
+	</tr>
+	<tr>
+		<th></th>
+		<th>ID</th>
+		<{if $params.isPlayer==true}><th>SlowPlay</th><{/if}>
+		<th></th>
+		<th style="text-align:left;"><{$smarty.const._COMP_CHALLENGER|capitalize}></th>
+		<th></th>
+		<th style="text-align:left;"><{$smarty.const._COMP_CHALLENGED|capitalize}></th>
+		<th><{$smarty.const._COMP_STATUS|capitalize}></th>
+		<th><{$smarty.const._COMP_CHALLENGE_DATE|capitalize}></th>
+		<{if $params.isPlayer==true}>
+		<th>Axis Game</th>
+		<th>Allies Game</th>
+		<{/if}>
+	</tr>
+	<{section name=challsection start=$params.start_challenge loop=$params.end_challenge}>
+		<tr class="<{cycle values=even,odd}>_comp">
+			<td><{$params.challenges[$smarty.section.challsection.index].comp_id}></td>
+			<td><{$params.challenges[$smarty.section.challsection.index].challenge_id}></td>
+			<{if $params.isPlayer==true}><td>
+			[
+			<{if $params.challenges[$smarty.section.challsection.index].chall_status == 0}>
+			<a href="challenges.php?op=slowplay&lid=<{$params.comp_id}>&uid=<{$params.user_id}>&cid=<{$params.challenges[$smarty.section.challsection.index].challenge_id}>">SP</a>
+			<{else}>
+			SP
+			<{/if}>
+			]
+			</td><{/if}>
+			<td class="country"><img style="vertical-align:middle" src="images/flags/<{$params.challenges[$smarty.section.challsection.index].challenger_country|lower}>.gif" alt="<{$params.challenges[$smarty.section.challsection.index].challenger_country}>"></td>
+			<td class="players">
+				<a href="profile.php?uid=<{$params.challenges[$smarty.section.challsection.index].challenger_id}>"><{$params.challenges[$smarty.section.challsection.index].challenger_name}></a>
+			</td>
+			<td class="country"><img style="vertical-align:middle" src="images/flags/<{$params.challenges[$smarty.section.challsection.index].challenged_country|lower}>.gif" alt="<{$params.challenges[$smarty.section.challsection.index].challenged_country}>"></td>
+			<td class="players">
+				<a href="profile.php?uid=<{$params.challenges[$smarty.section.challsection.index].challenged_id}>"><{$params.challenges[$smarty.section.challsection.index].challenged_name}></a>
+			</td>
+			<td>
+				<{if $params.challenges[$smarty.section.challsection.index].chall_status == 0}>
+					<{$smarty.const._COMP_ACTIVE|capitalize}>
+				<{else}>
+					<{$smarty.const._COMP_COMPLETED|capitalize}>
+				<{/if}>
+			</td>
+			<td><{$params.challenges[$smarty.section.challsection.index].chall_date|date_format}></td>
+			<{if $params.isPlayer==true}>
+			<td><{$params.challenges[$smarty.section.challsection.index].axis}></td>
+			<td><{$params.challenges[$smarty.section.challsection.index].allies}></td>
+			<{/if}>
+		</tr>
+	<{/section}>
+</table>
+
+<{if $invitations == "yes"}>
+	<p>
+	<h2 style="text-align:center"><{$params.name|capitalize}> <{$smarty.const._COMP_INVITATION_INVITATIONS|capitalize}></h2>
+	<table class="outer">
+		<tr>
+			<th><{$smarty.const._COMP_INVITATION_ID}></th>
+			<th><{$smarty.const._COMP_INVITATION_INVITER|capitalize}></th>
+			<th><{$smarty.const._COMP_INVITATION_DATE|capitalize}></th>
+			<th colspan=2><{$smarty.const._COMP_INVITATION_OPTIONS|capitalize}></th>
+
+		</tr>
+	
+
+		<{foreach item=row from=$inv_data}>
+			<tr class="<{cycle values="even,odd"}>">
+
+				<td><{$row.invitation_id}></td>
+				<td><a href="profile.php?uid=<{$row.inviter_id}>"><{$row.uname}></a></td>
+				<td><{$row.invitation_date|date_format}></td>
+				<td><a href="challenges.php?op=accept_invitation&lid=<{$params.comp_id}>&inv_id=<{$row.invitation_id}>"><{$smarty.const._COMP_INVITATION_ACCEPT}></a></td>
+				<td><a href="challenges.php?op=delete_invitation&lid=<{$params.comp_id}>&inv_id=<{$row.invitation_id}>"><{$smarty.const._COMP_INVITATION_DENY}></a></td>
+
+			</tr>
+		<{/foreach}>
+	</table>
+<{/if}>

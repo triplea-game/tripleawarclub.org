@@ -1,0 +1,3 @@
+<FilesMatch ~ "\cache$">
+deny from all
+</FilesMatch>

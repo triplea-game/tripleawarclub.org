@@ -1,0 +1,196 @@
+NovaSmart Technology
+email: admin[at]novasmarttechnology.com
+web: www.novasmarttechnology.com
+
+Jan Keller Pedersen A.K.A Mithrandir
+email: jkp@web-udvikling.dk
+web: www.web-udvikling.dk
+
+Changelog:
+
+************
+AMS v3.00 Final
+************
+> Enhance - Update backend.php (RSS) to becompatible with XOOPS 2.x.x, ImpressCMS 1.2.x, XOOPSCube Legacy 2.2.x
+> Enhance - Automatic clear the template cache when editing spotlight block or enabling SEF
+> Enhance - Support new XOOPS Editors and future XOOPS Editors by simply update AMS module
+> Enhance - Add default audience permission to all users
+> Enhance - Add default topic permission for approval (admin only) and submission (admin + user)
+> Enhance - File upload (mime type) permission now can be changed in AMS adminstration preference instead of hard coded
+> Enhance - Update mime type detection to the latest list
+> Added - Friendly URL
+> Added - Add  POST NEW ARTICLE at admin menu (manage article) as per request from users
+> Added - Add  POST NEW ARTICLE at main article page as per request from users
+> Added - Allow to upload ppt/powerpoint 
+> Fix Bug - XOOPS 2.2.x unable to load language file when SEF enabled
+> Fix Bug - Fix xoops editor selection disappear in XOOPS 2.3.x (only affect AMS v2.52)
+> Fix Bug - Remove unintended debug code (print "OK")
+> Fix Bug - sync tblcolor according to new tab count
+> Fix Bug - topic hyperlink disappear in breadcrumb when displaying storytopic (based on topic)
+> Fix Bug - fix error message occur caused by 0 article or 0 topic
+
+language change:
+> Added - define("_AMS_NW_POSTNEWARTICLE", "Post New Article")
+> Added - define("_AMS_MI_MIME_TYPES","MIME Types");
+
+************
+AMS v2.52 Final
+************
+> Fix Bug- AMS now TRULY not depend on phpp/xoopsforge Frameworks anymore (cause blank screen at submit form)
+
+************
+AMS v2.51 Final
+************
+> Security - Fix issue reported by trabis regarding potential sql injection in link.php
+
+************
+AMS v2.50 Final
+************
+> Enhance - Topic permission can be set in Topic Manager
+> Enhance - About page updated, and put at administration tab.
+> Enhance - replace some topic image with new image
+> Enhance - AMS now not depend on phpp/xoopsforge Frameworks anymore
+> Enhance - some topic image replaced
+> Enhance - Republish & Expiry date-time box now auto check/uncheck
+> Change - replace all deprecated function in xoops 2.3
+> Change - ams_block_spotlight_xxxx.html change to ams_block_spotlight_ams_xxxx.html
+> Added - Check latest version from server (admin->ams->about)
+> Added - Spotlight block (left/center/right) template can be choose.
+> Added - Spotlight template can be added straight into template folder and auto detected when install/upgrade
+> Added - Spotlight templace can have additional php command (see example ams_block_spotlight_ams_right)
+> Added - Spotlight template can have preview. Just put into XOOPS/modules/AMS/images/spotlight_preview.
+> Added - ImpressCMS support.
+> Added - FCKeditor, DHTML,HTMLArea,FCK,tinymce
+> Added - User can select their favourite editor at submit form
+> Added - Admin can choose to allow user to select their favourite editor or not
+> Fix Bug - Submit return blank page if didn't install framework from phpp/xoopsforge.com
+> Fix Bug - Topic name with an ' (apostrophe) in it, cannot change the weight of that Topic
+> Fix Bug - After edit, article will disappear for 10 minute
+> Fixed bug - Republish article didn't reset expiration date 
+
+language change:
+> Added - define("_AMS_MI_ABOUT", "About")
+> Added - define("_AMS_MI_SPOTLIGHT_TEMPLATE","Spotlight Templates");
+> Added - define("_AMS_MI_SPOTLIGHT_TEMPLATE_DESC","Which template enabled to admin to be used in spotlight block");
+> Added - define("_AMS_MI_EDITOR_DHTML","DHTML");
+> Added - define("_AMS_MI_EDITOR_HTMLAREA","HtmlArea Editor");
+> Added - define("_AMS_MI_EDITOR_FCK","FCK WYSIWYG Editor");
+> Added - define("_AMS_MI_EDITOR_TINYMCE","TinyMCE WYSIWYG Editor");
+> Added - define("_AMS_MI_EDITOR_USER_CHOICE", "Enable Editor Choice To User");
+> Added - define("_AMS_MI_EDITOR_USER_CHOICE_DESC", "Enable user to choose which editor they want");
+> Added - define("_AMS_MI_EDITOR_CHOICE", "Editor Choices");
+> Added - define("_AMS_MI_EDITOR_CHOICE_DESC", "Choices of editors enabled to user");
+> Remove - define("_AMS_MB_SPOTLIGHT_TEMPLATE_CENTER", "Minis Below Main");
+> Remove - define("_AMS_MB_SPOTLIGHT_TEMPLATE_RIGHT", "Minis Left of Main");
+> Remove - define("_AMS_MB_SPOTLIGHT_TEMPLATE_LEFT", "Minis Right of Main");
+
+Known Bugs
+- "Extended Text" WYSIWYG TinyMCE not working in PHP 4 environment. Its XOOPS Editor bugs, not AMS.
+
+************
+AMS v2.42 Final
+************
+> Fixed bug - attachment download, audience level not respected. (jobrazo)
+> Enhance - backend.php. To produce RSS for AMS
+> Enhance - KOIVI and non-KOIVI submit standardize to have hometext and bodytext
+> Enhance - Multi attachements for 1 article are shown on different lines, not one after another (jobrazo)
+> Enhance - AMS now working fine with both XOOPS 2.1.x and 2.2.x branches.
+> Enhance - Mysql 5 support
+> Enhance - Template changes to fix some inconsistent spotlight display due to some themes
+> Added - Guide to multiple page entry.
+> Added - "AUTO" for versioning control
+> Fixed bug - Koivi editor not work for XOOPS 2.2.x
+> Fixed bug - Delete function from moderate block does not work
+> Fixed bug - The register globals setting in php.ini must be set to on in order for the article preview function to work
+> Fixed bug - File upload feature does not work, and just returns this error "Error while uploading the file"
+
+Language Changes:
+> Added - _MULTIPLE_PAGE_GUIDE in admin.php
+
+Known Bugs:
+> Image Manager not working in KOIVI. Work around is... Press "Image Manager" -> CHECKED "HTML" tickbox -> add image (from popup) -> UNCHECK "HTML" tickbox
+
+************
+AMS v2.41
+************
+> Fixed bug - Moderate News block did not show unapproved articles
+> Fixed bug - Author Avatar is displayed at index and topic level where the topic icon should be displayed
+> Fixed bug - Permission settings for all audience ID's apart from the default audience ID are not sticking when set
+> Fixed bug - Notification message for new article awaiting approval contains the wrong link
+> Fixed bug - Path to topic icons contained a double forward slash
+> Fixed bug - Multipage articles do not show correctly when viewing additional pages of non active versions in version management
+> Added extended text input field for submitters and not just for approvers, when using the Koivi editor
+
+************
+AMS v2.4
+************
+Donator release of v2.3
+
+************
+AMS v2.3
+************
+> Added spotlight block with new administration page for management (DATABASE TABLE ADDED)
+> Added External Koivi editor support - set in module preferences
+> Changed By Topic View to only show latest article(s) from top-level topics and only links to immediate sub-topics
+> Added Article count per topic to top-level topics in By Topic view
+> Added Topics now ordered by weight and not alphabetically, by ID or by latest published article (DATABASE TABLE ALTERED)
+> Added Topic breadcrumb trail at the top of pages
+> Fixed situation where you could submit an article when there were no topics present
+> Changed default audience to be un-deleteable
+> Fixed HTML in spotlight block
+> Added new option for article image: Topic image, Author's avatar or No image
+> Added import of attachments, permissions and comments to Import facility in AMS/upgrade/index.php
+> Re-introduced the two input fields (scoop and extended text) - NOT GUARANTEED TO WORK WITH INTERNET EXPLORER
+
+AMS v2.1
+************
+> Changed name from News to AMS - Article Management System
+> Minor tweaks
+
+************
+News v2.06.2
+************
+> Added Versioning - articles cannot be edited, but new versions are created instead. Versions can be pruned by approvers
+> Added Audience Level - articles can only be read in full by users allowed to read the article's audience level
+> Added Linking - Articles can be linked to any item searchable through XOOPS or directly to external links
+> Added Article Ratings (anonymous users' ability to rate articles is toggled in module preferences)
+> Added Author blocks - For listing most productive, most read and highest rated authors of articles
+> Changed Admin interface to be more useful with filtering options
+> Removed edit/delete and similar non-public links from index page
+> Added Upgrade script from News 1.1 - found in news/upgrade
+> Added HTML Banner area for topics that can be inherited by subtopics and overridden by individual articles
+> Added Topic linking to forum (requires Newbb 2) which if enabled will add a link to the specified forum from the topic's articles
+
+************
+News v1.2 Final
+************
+> Added Spotlight Feature to Recent/Top News block
+
+************
+News v1.2 RC2
+************
+> Fixed topic image alignment not saving
+> Fixed NewsStory::getAllPublished to work with backend.php
+> Fixed new topics navigation block to work properly with restricting topics
+
+
+************
+News v1.2 RC1
+************
+> Added ALT+S as submit option (include/storyform.inc.php, admin/storyform.inc.php)
+> Fixed warning about invalid index "anonpost" in submit form (include/storyform.inc.php)
+> Changed $HTTP_GET_VARS to $_GET and $HTTP_POST_VARS to $_POST
+> Added per-usergroup permissions for viewing, submitting and approving newsstories per topic
+> Full articles only viewable to users with view permissions to that topic
+> Added moderation block for approving/editing submitted articles outside the administration area
+> Added toggle to show only news from view-permitted topics on main page view
+> Added By Topic view on main page
+> Added Column view on main page - for old (Classic) view and for By Topic view
+> Added block for viewing top-level topics listed - toggle for only view-permitted topics in block preferences
+> Added block with recent/top news for one or more topics
+> Changed submit form to depend on approve/submit permissions with both info and extended text areas available to approvers only
+> Changed submit form from administration area to use same form as from main menu
+> Added upload to submit form
+> Added upload to topic creation form
+
+v1.1 - Baseline

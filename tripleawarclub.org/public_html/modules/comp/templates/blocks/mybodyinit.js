@@ -1,0 +1,2 @@
+		Element.cleanWhitespace('accordion');
+		init();

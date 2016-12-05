@@ -1,0 +1,44 @@
+#dropmenudiv{
+position:absolute;
+background-color: #e6e6e6;
+border:1px solid black;
+border-bottom-width: 0;
+font:normal 12px Verdana;
+line-height:18px;
+z-index:100;
+}
+
+#dropmenudiv a{
+width: 100%;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid black;
+padding: 1px 0;
+text-decoration: none;
+font-weight: bold;
+}
+
+#dropmenudiv a:hover{ /*hover background color*/
+background-color: #ffffff;
+}
+
+/* Sample CSS definition for the example list. Remove if desired */
+.navlist li {
+list-style-type: square;
+width: 135px;
+background-color: #FFFFB9;
+}
+
+a.playermenu{
+	background-color: #DFFEA7;
+}
+a.playermenu:hover{
+	background-color: #ffffff;
+}
+
+a.adminmenu{
+	background-color: #FF9396;
+}
+a.adminmenu:hover{
+	background-color: #ffffff;
+}

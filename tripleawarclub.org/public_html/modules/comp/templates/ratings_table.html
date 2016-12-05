@@ -1,0 +1,24 @@
+<table class="outer">
+	<tr>
+		<th><{$smarty.const._COMP_RATING|capitalize}> <{$smarty.const._COMP_PLAYER|capitalize}></th>
+		<th><{$smarty.const._COMP_RATING|capitalize}></th>
+		<th><{$smarty.const._COMP_DATE|capitalize}></th>
+		<th><{$smarty.const._COMP_COMMENT|capitalize}></th>
+	</tr>
+	<{section name=rate loop=$params.ratings max=$max}>
+		<tr class="<{cycle values=even,odd}>">
+			<td><a href="profile.php?uid=<{$params.ratings[rate].rater_id}>"><{$params.ratings[rate].rater_name}></a></td>
+			<td
+				<{if $params.ratings[rate].rating == 1}>
+					style="color:green"><{$smarty.const._COMP_POSITIVE|capitalize}>
+				<{elseif $params.ratings[rate].rating == -1}>
+					style="color:red"><{$smarty.const._COMP_NEGATIVE|capitalize}>
+				<{elseif $params.ratings[rate].rating == 0}>
+					><{$smarty.const._COMP_NEUTRAL|capitalize}>
+				<{/if}>
+			</td>
+			<td><{$params.ratings[rate].rating_date}></td>
+			<td><{$params.ratings[rate].rating_comment}></td>
+		</tr>
+	<{/section}>
+</table>

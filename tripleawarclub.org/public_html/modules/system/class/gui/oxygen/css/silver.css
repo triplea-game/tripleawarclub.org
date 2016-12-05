@@ -1,0 +1,166 @@
+/* $Id$ */
+body {
+	background-color: #EBE9E1;
+}
+
+.outer {
+	border: 2px solid #D5D1DF;
+}
+
+.head {
+	background-color: #ebebeb;
+}
+
+.even {
+	background-color: #D1DBDF;
+}
+
+.odd {
+	background-color: #efefef;
+}
+
+#logoHead {
+	background: url(../img/header-bg_big.png) repeat-x;
+	border-bottom: 1px solid #fff;
+}
+
+#navbarCP {
+	background: url(../img/header.gif);
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+#navbarCP ul.menu ul li a {
+	background: #ddd;
+	color: #444;
+}
+
+#navbarCP ul.menu ul li a:hover {
+	background-color: #c5c5c5;
+	color: #000;
+}
+
+#navbarCP ul.menu .menulink {
+	border: 1px solid #ededed;
+	color: #333;
+	background: url(../img/header.gif);
+}
+
+#navbarCP ul.menu .menulink:hover,ul.menu .menuhover {
+	border: 1px solid #aaa;
+	background: url(../img/header_over.gif);
+}
+
+#navbarCP ul.menu .sub {
+	background: #ebebeb url(../img/arrow.gif) 136px 8px no-repeat;
+}
+
+#choosestyle a {
+	border: 1px solid #CCCCCC;
+	background-color: #595B5F;
+	color: #f7f7f7;
+}
+
+#bodyCP {
+	background-color: #f7f7f7;
+	border: 2px solid #BFBFBF;
+}
+
+#containBodyCP {
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#navOptionsCP {
+	background: #e7e7e7;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#navOptionsCP a {
+	border: 1px solid #DFE0FD;
+}
+
+#navOptionsCP a:hover {
+	background-color: #E7F4F7;
+	border-color: #ADD8E6;
+}
+
+#navOptionsCP .modname {
+	color: #606060;
+}
+
+#xo-footer {
+	background-color: #CFCFCF;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #dedede;
+	color: #666666;
+}
+
+.cpicon a {
+	background-color: #f0f0f0;
+	color: #666666;
+	border: 1px solid #f9f9f9;
+}
+
+.cpiconmodules a {
+	background-color: #f0f0f0;
+	color: #666666;
+	border: 1px solid #f9f9f9;
+}
+
+.cpicon a:hover,.cpiconmodules a:hover {
+	color: #1E90FF;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #f9f9f9;
+}
+
+#main_logo {
+	background: url(../img/header-logo_big.png) no-repeat !important;
+}
+
+/* ============= buttonbar ============== */
+#buttontop {
+	background: #DBD7D1 !important;
+	border-top: 1px solid #666 !important;
+	border-left: 1px solid #666 !important;
+	border-right: 1px solid #666 !important;
+}
+
+#buttonbar {
+	background: #DBD7D1 !important;
+	border-left: 1px solid #666 !important;
+	border-right: 1px solid #666 !important;
+	border-bottom: 1px solid #666 !important;
+}
+
+#buttonbar a {
+	background: url('../img/bg_tabs1.gif') no-repeat 0% -34px !important;
+}
+
+#buttonbar a span {
+	background: url('../img/bg_tabs2.gif') no-repeat 100% -34px
+		!important;
+	color: #767676 !important;
+}
+
+#buttonbar a:hover span {
+	color: #333 !important;
+}
+
+#buttonbar #current a span {
+	background-position: 100% 0 !important;
+	color: #23649F !important;
+}
+
+#buttonbar a:hover {
+	background-position: 0 -69px !important;
+}
+
+#buttonbar a:hover span {
+	background-position: 100% -69px !important;
+	color: #BC2A4D !important;
+}

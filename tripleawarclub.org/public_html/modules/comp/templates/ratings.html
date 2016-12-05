@@ -1,0 +1,6 @@
+<h2 class="siteheader"><{$params.profile.uname}>'s <{$smarty.const._COMP_RATINGS|capitalize}></h2>
+
+<p>Your overall rating is: <{$params.profile.karma_rating}>%(+<{$params.profile.num_positive}>, <{$params.profile.num_neutral}>,-<{$params.profile.num_negative}>).</p><br>
+
+<h3 class="comp">Ratings Listing</h3>
+<{include file="file:$xoops_rootpath/modules/comp/templates/ratings_table.html" params=$params}>

@@ -1,0 +1,89 @@
+<{popup_init src="`$smarty.const.XOOPS_URL`/modules/comp/include/overlib/overlib.js"}>
+
+<h2 align="center"><{$params.name|capitalize}> <{$smarty.const._COMP_STANDINGS|capitalize}></h2>
+
+<table width="100%" class="outer">
+	<tr>
+		<td style="text-align:center;width:20px">&nbsp;</td>
+		<th align="center"><{$smarty.const._COMP_PLAYER|capitalize}></th>
+		<th align="center"><{$smarty.const._COMP_POINTS|capitalize}></th>
+		<th align="center"><{$smarty.const._COMP_RANK|capitalize}></th>
+		<th align="center"><{$smarty.const._COMP_RECORD|capitalize}></th>
+		<th align="center"><{$smarty.const._COMP_AXISRECORD|capitalize}></th>
+		<th align="center"><{$smarty.const._COMP_ALLIESRECORD|capitalize}></th>
+	</tr>
+	<{foreach item=player from=$params.standings name=standingfor}>
+		<tr>
+			<{* Position *}>
+			<td style="text-align:center;width:20px"><{$smarty.foreach.standingfor.iteration}></td>
+
+			<{* Country image *}>
+			<td><img src="images/flags/<{$player.country}>.bmp" alt="<{$player.country}>">
+
+			<{* Display user name with link and popup *}>
+			<{strip}>
+			<a href="profile.php?uid=<{$player.xoops_user_id}>"
+			<{if $player.status == 1 }>
+				style="color:red"
+			<{/if}>
+			onmouseover="return overlib('
+			<table style=&quot;width:300px;background-color:white&quot; border=&quot;1&quot;>
+			<tr><th colspan=&quot;2&quot;><{$player.uname}>\'s <{$smarty.const._COMP_OPTIONS|capitalize}></th></tr>
+			<{foreach item=image from=$player.options}>
+				<tr>
+				<td style=&quot;width:50px;text-align:center&quot;><img height=&quot;25&quot; src=&quot;images/<{$image.name}>.png&quot;></td>
+				<td style=&quot;padding:5px&quot;><{$image.desc}></td>
+				</tr>
+			<{/foreach}>
+			</table>
+			', FGCOLOR, '', BGCOLOR, '');" onmouseout="return nd();">
+			<{$player.uname}></a>
+			<{/strip}>
+
+			<{* Display star, if any *}>
+			<{if $player.starimage}>
+				<img height="25" src="images/<{$player.starimage}>_small.png">
+			<{/if}>
+			</td>
+
+			<{* Rating (points) *}>
+			<td align="center"><{$player.rating}></td>
+
+			<{* Rank (e.g., Private, General, etc.) *}>
+			<td align="center"><{$player.rank}></td>
+
+			<{* Overall Record *}>
+			<td><a href="matches.php?lid=<{$player.comp_id}>&pid=<{$player.xoops_user_id}>&side=both">
+				<table border="0" width="175">
+					<tr>
+						<td bgcolor="blue" width="<{$player.winpercent}>"></td>
+						<td bgcolor="lightblue" width="<{$player.losspercent}>"></td>
+						<td width="75" align="center"><{$player.winpercent}>% (<{$player.wins}> <{$smarty.const._COMP_OF}> <{$player.matches}>)</td>
+					</tr>
+				</table></a>
+			</td>
+
+			<{* Axis Record *}>
+			<td><a href="matches.php?lid=<{$player.comp_id}>&pid=<{$player.xoops_user_id}>&side=axis">
+				<table border="0" width="175">
+					<tr>
+						<td bgcolor="yellow" width="<{$player.axiswinpercent}>"></td>
+						<td bgcolor="lightyellow" width="<{$player.axislosspercent}>"></td>
+						<td width="75" align="center"><{$player.axiswinpercent}>% (<{$player.axiswins}> <{$smarty.const._COMP_OF}> <{$player.axismatches}>)</td>
+					</tr>
+				</table></a>
+			</td>
+
+			<{* Allies Record *}>
+			<td><a href="matches.php?lid=<{$player.comp_id}>&pid=<{$player.xoops_user_id}>&side=allies">
+				<table border="0" width="175">
+					<tr>
+						<td bgcolor="green" width="<{$player.allieswinpercent}>"></td>
+						<td bgcolor="lightgreen" width="<{$player.allieslosspercent}>"></td>
+						<td width="75" align="center"><{$player.allieswinpercent}>% (<{$player.allieswins}> <{$smarty.const._COMP_OF}> <{$player.alliesmatches}>)</td>
+					</tr>
+				</table></a>
+			</td>
+		</tr>
+	<{/foreach}>
+</table>

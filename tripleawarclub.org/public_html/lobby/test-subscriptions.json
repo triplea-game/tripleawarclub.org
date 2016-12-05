@@ -1,0 +1,91 @@
+[
+  {
+    "subscription_id": 1,
+    "fbl_email": "matt.miller1@returnpath.com",
+    "subscription_type_id": 1,
+    "subscription_status_id": 1,
+    "created_at": "2015-09-14 21:35:19+00",
+    "updated_at": "2015-09-14 21:35:26+00",
+    "feed": {
+      "feed_id": 2,
+      "fbl_from_email": "feedbackloop@comcastfbl.senderscore.net",
+      "name": "Comcast DKIM FBL Feed",
+      "feed_type_id": 1,
+      "feed_status_id": 1,
+      "created_at": "2015-09-14 21:12:02+00",
+      "updated_at": null
+    },
+    "company": {
+      "company_id": 3,
+      "name": "Company",
+      "slug": null,
+      "company_type_id": 1,
+      "company_status_id": 1,
+      "created_at": "2015-09-14 21:35:18+00",
+      "updated_at": null
+    },
+    "domains": [
+        {
+          "domain": "facebookmail.com",
+          "selector": "*",
+          "conf_email": "me@company.com",
+          "domain_status_id": 1,
+          "created_at": "2015-09-14 21:35:19+00",
+          "updated_at": "2015-09-14 21:35:26+00"
+        }
+    ],
+    "cidrs": [
+        {
+          "cidr": "66.220.144.138/32",
+          "conf_email": "me@company.com",
+          "cidr_status_id": 1,
+          "created_at": "2015-09-14 21:35:19+00",
+          "updated_at": "2015-09-14 21:35:26+00"
+        }
+    ]
+  },{
+    "subscription_id": 2,
+    "fbl_email": "matt.miller2@returnpath.com",
+    "subscription_type_id": 1,
+    "subscription_status_id": 1,
+    "created_at": "2015-09-14 21:35:19+00",
+    "updated_at": "2015-09-14 21:35:26+00",
+    "feed": {
+      "feed_id": 3,
+      "fbl_from_email": "blarg",
+      "name": "blarggg",
+      "feed_type_id": 1,
+      "feed_status_id": 1,
+      "created_at": "2015-09-14 21:12:02+00",
+      "updated_at": null
+    },
+    "company": {
+      "company_id": 3,
+      "name": "Company",
+      "slug": null,
+      "company_type_id": 1,
+      "company_status_id": 1,
+      "created_at": "2015-09-14 21:35:18+00",
+      "updated_at": null
+    },
+    "domains": [
+        {
+          "domain": "facebookmail.com",
+          "selector": "*",
+          "conf_email": "me@company.com",
+          "domain_status_id": 1,
+          "created_at": "2015-09-14 21:35:19+00",
+          "updated_at": "2015-09-14 21:35:26+00"
+        }
+    ],
+    "cidrs": [
+        {
+          "cidr": "66.220.144.138/32",
+          "conf_email": "me@company.com",
+          "cidr_status_id": 1,
+          "created_at": "2015-09-14 21:35:19+00",
+          "updated_at": "2015-09-14 21:35:26+00"
+        }
+    ]
+  }
+]
