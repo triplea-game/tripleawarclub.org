@@ -1,0 +1,41 @@
+#tabs
+{
+padding: 9px 0;
+margin-left: 0;
+border:none;
+font: bold 12px Verdana, sans-serif;
+
+}
+
+#tabs li
+{
+list-style: none;
+margin: -2px;
+display: inline;
+}
+
+#tabs li a
+{
+padding: 9px 0.7em;
+margin-left: 0px;
+border: none;
+border-bottom: none;
+background: transparent;
+text-decoration: none;
+}
+
+#tabs li a:link { color: #2E1900; }
+#tabs li a:visited { color: #2E1900; }
+
+#tabs li a:hover
+{
+color: #713E00;
+background: #DDE;
+border-color: #227;
+}
+
+#tabs li a#current
+{
+background: white;
+border-bottom: 1px solid white;
+}

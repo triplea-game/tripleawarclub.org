@@ -1,0 +1,89 @@
+/*
+
+1. accordion div
+2. top-menu ul
+3. Product/Services h3
+4. moofx1 h3
+5. moofx2 as
+
+/*
+
+/**/
+		
+#xo-page td#xo-canvas-leftcolumn div.comp #accordion {
+margin:40px 0 0 0;
+padding:40px 0 0 0;
+width:140px;
+}
+
+/**/
+
+#xo-canvas-leftcolumn .xo-block #menu_vert ul {  
+ margin:40px 0 0 0;
+ padding:40px 0 0 0;
+list-style-type: none;
+}
+#xo-canvas-leftcolumn .xo-block #menu_vert ul img {
+vertical-align:bottom;
+margin-right:2px;
+}
+#xo-canvas-leftcolumn .xo-block  #menu_vert ul li {
+list-style-type: none;
+list-style-image:none;
+height:16px;
+line-height:16px;
+margin-bottom:0px;
+}
+#xo-canvas-leftcolumn .xo-block #menu_vert ul li a {
+text-decoration:none;
+color:white;
+}
+
+/**/
+
+#xo-canvas-leftcolumn .xo-block  #menu_vert h3 {
+color:#AB5500;
+font-size:12px;
+text-transform:capitalize;
+padding:10px 0 10px 0;
+margin:0;
+background: url(http://www.tripleawarclub.org/images/arrow2.gif) no-repeat right top;
+}
+
+/**/
+
+#menu_vert h3.moofx1 {
+  color:#AB5500;
+  font-size: 12px;
+  cursor: pointer;
+  border-top:none;
+  padding:4px 0 4px 5px;
+  margin:0 0 0 0;
+  font-weight:normal;
+  border-bottom: 1px solid #ddd;
+  background-color:#fff;
+  }
+
+/**/
+  
+#menu_vert #accordion div.moofx2 a {
+  display: block;
+  text-decoration: none;
+  padding: 4px 0 4px 10px;
+  border-bottom: 1px solid #ddd; 
+  color: #AB5500;
+  font-weight:normal;
+  background-color:#f9f9f9;
+  }
+
+#menu_vert #accordion div.moofx2 a:hover {
+color: #AB5500;
+  font-weight:normal;
+  border-bottom: 1px solid #ddd;
+  background-color:#fff;color:#333;
+}
+
+#menu_vert #accordion div.moofx2 a.playermenu {background-color:#f2f2f2;}
+#menu_vert #accordion div.moofx2 a.adminmenu {background-color:#eaeaea;}
+#menu_vert #accordion div.moofx2 a.playermenu:hover {background-color:#ffffff;}
+#menu_vert #accordion div.moofx2 a.adminmenu :hover{background-color:#ffffff;}

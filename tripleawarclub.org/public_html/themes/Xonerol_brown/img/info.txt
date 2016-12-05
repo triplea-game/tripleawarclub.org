@@ -1,0 +1,23 @@
+/* english */
+- To put here, only images of the "layout" (skeleton of the theme)
+
+/* french */
+- Mettre ici, uniquement les images du "layout" (squelette du thème)
+
+/* spanish */
+- Para poner aquí, solamente imágenes del "layout" (esqueleto del tema)
+
+/* portuguese */
+- Para põr aqui, somente imagens da "layout" (esqueleto do tema)
+
+/* italian */
+- Per mettere qui, soltanto immagini della "layout" (scheletro del tema)
+
+/* german */
+- Sich hier setzen, nur Bilder des "Layouts" (Skelett des Themas)
+
+/* Dutch */
+- Om hier te zetten, slechts beelden van de "layout" (skelet van het thema)
+
+/* polish */
+- Tutaj, tylko wizerunek the "layout" (kosciec the temat)

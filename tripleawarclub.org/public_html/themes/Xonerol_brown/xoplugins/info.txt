@@ -1,0 +1,22 @@
+/* english */
+- To put here templates HTML necessary to certain "smarty plugins"
+/* french */
+- Mettre ici les templates HTML nécessaire à certains "plugins smarty"
+
+/* spanish */
+- Para poner aquí el HTML de los patrones necesario a ciertos "plugins smarty"
+
+/* portuguese */
+- Para põr aqui o HTML dos moldes necessário a determinados do "plugins smarty"
+
+/* italian */
+- Per mettere qui il HTML dei modelli necessario a determinati "plugins smarty"
+
+/* german */
+- Schablonen HTML hier setzen notwendig zu bestimmten "Smarty plugins"
+
+/* Dutch */
+- Om malplaatjesHTML hier te zetten noodzakelijk voor bepaalde "smarty plugins"
+
+/* polish */
+- Tutaj szablon HTML konieczny pewny "smarty plugins"

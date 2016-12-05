@@ -1,0 +1,591 @@
+/* Thanks to Snow77, Skalpa and Leostotch for the initial work, Dugris for help  */
+/* Mor.pho.GEN.e.sis version 2.1 by kris (http://www.xoofoo.org and http://www.frxoops.org) */
+/* file name : content.css - 12 01 2008 */
+
+/* style sheet for microformats */
+/*@import url(microforms.css);*/
+
+
+
+/* Titles ... */
+h1,h2,h3,h4,h5,h6 {
+     font-weight: normal;
+}
+h3,h4,h5,h6 {
+     color: #562F00;
+}
+h1 span {
+     font-weight: bold;
+}
+h3 span {
+     font-weight: bold;
+}
+h4 span {
+     font-weight: bold;
+}
+a[rel~=alternate] { float:		right;}
+a {
+    text-decoration: none;
+    color: #AB5500;
+ }
+a:hover {
+    text-decoration: underline;
+}
+p {
+    line-height: 1.8em;
+}
+img {	border:							0;}
+hr{}
+strong	{	
+	font-style:						italic;
+	font-weight:					bold;
+}
+
+del { text-decoration:			line-through;}
+address	{	
+	font-style:						normal;
+	letter-spacing:				.1em;
+}
+/*---------- acronyms, abbréviation ------------*/
+acronym, abbr {
+	border-bottom: 				#666 1px dashed;
+	cursor: 							help;
+}
+acronym:hover, abbr:hover { border-bottom-color: #FF9900;}
+
+/*------------------- lists ----------------*/
+#xo-canvas-content ul {
+	margin: 							0px;
+	padding: 						0px;
+	list-style: 					decimal inside;
+	text-align: 					left;
+}
+#xo-canvas-content li {
+	margin-left: 					0px;
+	background-color: 			inherit;
+	color: 							#32529C;
+	line-height: 					1.4em;
+	list-style: 					square inside;
+}
+
+/* ========== styles used in the “article” of contents (exemple : news) ============*/
+.item {
+	margin-bottom: 				20px;
+	background-color: 			transparent;
+	color: 							#333;
+}
+.itemHead {
+	padding-left:					4px;
+	padding-bottom:				3px;	
+	color:							#AB5500/*#AA7036*/;
+	font-family:					"Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-size:						1.2em;
+	font-weight:					normal;
+	text-transform: capitalize;	
+	border-left: 7px #AB5500 solid;
+             border-bottom: 1px dotted #d7863e;
+}
+.itemInfo {
+	background-color: 			inherit;
+	padding: 						3px;
+	color: 							#333;
+	font-size: 						.8em;
+	font-style: 					italic;
+	text-align: 					right;
+}
+.itemTitle a {
+	background-color: 			inherit;
+	color:							#562F00;
+              font-size: 1.5em;
+	font-weight: 					normal;
+	text-decoration: 				none;
+              text-transform: lowercase;            
+}
+.itemTitle a:hover {
+	background-color: 			inherit;
+	color: 							#AB5500;
+	text-decoration: 				underline;
+}
+.itemPoster, .itemPostDate, .itemStats {
+	background-color: 			inherit;
+	color: 							#666;
+	font-size: 						.9em;
+}
+.itemPoster a {
+	background-color: 			inherit;
+	color:							#AB5500;
+	text-decoration: 				none;
+}
+.itemPoster a:hover {
+	background-color: 			inherit;
+	color:							#562F00;
+	text-decoration: 				none;
+}
+.itemPoster_news {
+	background: url(../img/n5.gif) no-repeat left;
+              padding-left: 15px;
+	color: 							#666;
+	font-size: 						.9em;
+}
+.itemPoster_news a {
+	background-color: 			inherit;
+	color:							#AB5500 !important;
+	text-decoration: 				none;
+}
+.itemPoster_news a:hover {
+	background-color: 			inherit;
+	color:							#562F00 !important;
+	text-decoration: 				none;
+}
+.itemBody {
+	background-color: 			inherit;
+	color:							#666;
+}
+.item
+.itemText {
+	margin-top: 					1px;
+	margin-bottom: 				1px;
+	background-color: 			inherit;
+	color:							#666;
+	text-align:						justify;
+}
+.itemText a , .itemInfo a, .itemFoot a {
+	background-color: 			inherit;
+	color: 							#AB5500;
+	font-weight: 					normal;
+	text-decoration: 				none;
+}
+.itemText a:hover .itemInfo a:hover, .itemFoot a:hover {
+	background-color: 			inherit;
+	color: 							#AB5500;
+	text-decoration: 				underline;
+}
+.itemBody a{
+	background-color: 			inherit;
+	color:							#AB5500;
+}
+.itemBody a:hover {
+	background-color:				inherit;
+	color:							#562F00;
+	text-decoration: 				none;
+}
+.itemText:first-letter {}
+.itemFoot {
+	margin-right: 					20px;
+	margin-left: 					20px;
+	background-color: 			inherit;
+	padding: 						3px;
+	color:							#666;
+	text-align: 					right;
+}
+.itemAdminLink {
+	background-color: 			inherit;
+	color:							#666;
+	font-size: 						.9em;
+}
+.itemPermaLink {
+	background-color: inherit;
+	color:							#666;
+	font-size: 						.9em;
+}
+.itemPermaLink_news {
+	background: url(../img/n6.gif) no-repeat right;
+             padding-right: 15px;
+	color:							#666;
+	font-size: 						.9em;
+}
+
+/*=============== styles for the tables =================*/
+table {
+	width: 							100%;
+	border-collapse: 				separate;
+	border-spacing: 				0;
+}
+table td {
+	padding: 						0;
+	border-width: 					0;
+	vertical-align: 				top;
+}
+.outer {
+	background-color: 			#fff;
+	color:							#333;
+	font-size:						.9em;
+}
+.head {
+	background-color: 			#fff;             
+	padding: 						8px;
+	color: 							#666;
+	font-weight: 					bold;
+}
+.head a {
+	background-color: 			inherit;
+	color: 							#AB5500;
+              text-decoration: none;
+}
+.head a:hover {
+	background-color: 			inherit;
+	color:							#562F00;
+              text-decoration: none;
+}
+.even {
+	background-color: 			#fff;
+	padding: 						8px;
+	color:							#333;
+}
+.odd {
+	background-color: 			#fff;
+	padding: 						8px;
+	color:							#333;
+}
+tr.even td {
+	background-color: 			#fff;
+	padding: 						8px;
+	color:							#333;
+}
+tr.odd td {
+	background-color: 			#fff; 
+	padding: 						8px;
+	color:							#333;
+}
+.foot, tfoot {
+	background-color : 			#FFF;
+	padding: 						2px;
+	color:							#333;
+	font-weight: 					bold;
+	text-align:						center;
+}
+th, thead {
+	background: 			#7D4500 url(../img/n3.gif) repeat-x;
+	padding: 						5px 2px;
+	color: 							#fff;
+	font-size:						1.1em;
+	font-weight : 					bold;
+	vertical-align: 				middle;
+}
+th a, thead a {
+	background-color: 			none;
+	color: 							#fff;
+}
+th.head {
+color: #fff;
+}
+
+/* ===== core messages ===== */
+.highlight {
+	background-color:				#ff0;
+	color: 							#ff0000;
+	font-weight: 					bold;
+}
+.errorMsg,.confirmMsg, .resultMsg, .successMsg  {
+	padding: 						.8em;
+	text-align:						center;
+	margin-bottom: 				1em;
+	border: 							2px solid #ddd;
+}
+.errorMsg {
+	background-color: 			#FBE3E4;
+	color: 							#D12F19;
+	border-color: 					#FBC2C4;
+}
+.confirmMsg {
+	background-color: 			#FFF6BF;
+	color: 							#817134;
+	border-color: 					#FFD324;
+}
+.resultMsg {
+	background-color: 			#E6EFC2;
+	color: 							#529214;
+	border-color: 					#C6D880;
+}
+.errorMsg a {
+	background-color: 			transparent;
+	color: 							#D12F19;
+}
+.confirmMsg a   {
+	background-color: 			transparent;
+	color: 							#817134;
+}
+.successMsg a  {
+	background-color: 			transparent;
+	color: 							#529214;
+}
+div.xoopsCode {}
+div.xoopsQuote {}
+
+/*=========== Styles utilisés pour les commentaires (et newbb/cbb également) ===========*/
+.comTitle {
+	margin-bottom: 				2px;
+	background-color: 			none;
+	color:							#fff;
+	font-weight: 					bold;
+}
+.comText {
+	background-color: 			inherit;
+	padding: 						2px;
+	color:							#666;
+}
+.comUserStat {
+	margin: 							2px;
+	background-color: 			#fff;
+	padding: 						2px;
+	color: 							#562F00;
+	font-weight:					normal;
+	font-size: 						.9em;
+	border: 							1px solid #c0c0c0;
+}
+.comUserStatCaption {font-weight: normal;}
+.comUserStatus {
+	margin-left: 					2px;
+	margin-top: 					10px;
+	background-color: 			inherit;
+	color: 							#32529C;
+	font-weight:					bold;
+	font-size: 						.8em;
+}
+.comUserRank {margin: 			2px;}
+.comUserRankText {
+	font-size: 						.8em;
+	font-weight:					bold;
+}
+.comUserRankImg {border: 		0;}
+.comUserName {}
+.comUserImg {margin: 			2px;}
+.comDate {
+	font-weight: 					normal;
+	font-style: 					italic;
+	font-size: 						.8em;
+}
+.comDateCaption {
+	font-weight: 					bold;
+	font-style: 					normal;
+}
+
+/*================ Style pour les Citations ================*/
+blockquote {
+	font-style: italic;
+	overflow: auto;
+	background-image: url(../img/quote.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	border: 1px dotted #D1D1D1;
+	background-color: #FFFFFF;
+}
+
+/*================== Style pour les Codes =================*/
+.xoopsCode {
+	display:							block;
+	padding:							.5em;
+	width:							95%;
+	max-height: 					400px;
+	overflow: 						auto;
+	background-color:				#fff;
+	color:							#666;
+	font-family:					monospace;
+	font-size: 						.9em;
+	border:							1px solid #d0d0d0;	
+}
+
+
+body.site_closed form {	padding: 1em 35%;}
+
+
+
+.caption-text {color: #333;}
+
+img.imglink_right {width:50px;border:none;margin:10px;}
+img.imglink_left {width:50px;border:none;margin:10px;}
+
+table.amsItem {
+background-color:white;
+margin:0px;
+padding:0px;
+border:solid 1px #E3E3E3;
+font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+height: 140px;
+vertical-align:top;
+}
+
+table.amsItem td {padding:5px 0 0 10px;vertical-align:top;}
+
+td.amsTitle {
+vertical-align:top;
+font-size:18px;
+font-weight:bolder;
+font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+td.amsTitle span.itemPostDate {font-size:11px;color:#666;}
+
+table.amsItem td.amsDetails {
+font-size:11px;
+color:black;
+background:#EFEFEF url('../img/bg-amsDetails.png') top left repeat-y;
+width:65px;
+padding:0 5px 0 0;
+text-align:center;
+}
+
+table.amsItem td.amsDetails div.amsDetailsBG {
+padding:5px 0 3px 10px;
+background:transparent url('../img/bg-amsDetailsTop.png') top left no-repeat;
+}
+
+table.amsItem  td.amsDetails img {width:40px;}
+td.amsItemBody {vertical-align:top;}
+td.amsItemBody  p.itemText {border-top: dotted 1px #ccc;margin:3px 5px 0 0;}
+table.amsItem td.amsMore {padding:5px 0 5px 10px;text-align:left;}
+
+span.itemStats {color:black;}
+
+h2.siteheader {
+color:#A25D0B;
+font-weight:bold;
+padding-top:0px;
+margin-top:0px;
+font-size:24px;
+font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+text-align:left;
+text-transform:capitalize;
+/*
+padding: 0; margin: -3px 0 5px 0 ; border-bottom: 1px solid #d7863e;
+color:#562f00;text-transform: capitalize;font-size: 1.6em; text-align: left; font-weight: bold; padding-right: 0.3em;*/
+}
+h2.siteheader a {color:#A25D0B;font-weight:bold;padding-top:0px;margin-top:0px;text-decoration:none;}
+h2.siteheader a:hover {color:#D9781A;text-decoration:none;}
+
+h3.weblinks {margin-bottom:5px;
+	padding-left:					4px;
+	padding-bottom:				3px;	
+	color:							#AB5500/*#AA7036*/;
+	font-family:					"Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-size:						1.2em;
+	font-weight:					normal;
+	text-transform: capitalize;	
+	border-left: 7px #AB5500 solid;
+             border-bottom: 1px dotted #d7863e;
+
+}
+h4.weblinks {margin-top:10px;margin-bottom:5px;
+	padding-left:					4px;
+	padding-bottom:				3px;	
+	color:							#AB5500/*#AA7036*/;
+	font-family:					"Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-size:						1.2em;
+	font-weight:					normal;
+	text-transform: capitalize;	
+	border-left: 7px #AB5500 solid;
+             border-bottom: 1px dotted #d7863e;
+}
+
+span.wl_breadcrumb {font-size: 10px; line-height: 18px;}
+span.wl_breadcrumb a {color:#AB5500;font-weight:normal;}
+
+p.wf_linktitle {border-bottom: 1px dotted #d7863e;}
+p.wf_linktitle_l {border-bottom: 1px dotted #d7863e;font-size:1.3em;}
+
+#xo-content .weblinks_submit {color:#562f00;}
+#xo-content .weblinks_submit li {color:#562f00;}
+#xo-content ul.weblinks_submit li {color:#562f00;}
+
+h3.comp {margin-bottom:5px;
+	padding-left:					4px;
+	padding-bottom:				3px;	
+	color:							#AB5500/*#AA7036*/;
+	font-family:					"Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-size:						1.2em;
+	font-weight:					normal;
+	text-transform: capitalize;	
+	border-left: 7px #AB5500 solid;
+             border-bottom: 1px dotted #d7863e;
+
+}
+
+h3.comp a {color:#562f00;}
+
+table.comp_table td {padding:4px;}
+
+table.comp_table img {
+
+	border: 1px solid #d7863e;
+	padding:2px;
+
+}
+
+table.outer td.recent_post { padding:5px 5px 5px 15px; font-size:12px; }
+table.outer td.recent_post i { font-size:10px;color:#666;}
+
+td.topicsection {padding:3px;color:#333;border-left:1px dotted #d7863e;}
+
+tr.even_comp td {
+	background-color: 			#FAFAFA;
+	padding: 						5px 1px 5px 1px;
+	color:							#333;
+	border-top:2px solid #fff;
+	border-bottom:1px dotted #d7863e;
+	border-right:1px solid #fff;
+	text-align:center;
+	vertical-align:middle;
+}
+tr.odd_comp td {
+	background-color: 			#f8f8f8; 
+	padding: 						5px 1px 5px 1px;
+	color:							#333;
+	border-top:2px solid #fff;
+	border-bottom:1px dotted #d7863e;
+	border-right:1px solid #fff;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td.country { padding:0px; margin:0px; vertical-align:middle; width:16px; text-align:center;}
+tr.even_comp td.email { text-align:left;}
+tr.even_comp td.players { text-align:left;}
+tr.even_comp th.players { text-align:left;}
+tr.odd_comp td.email { text-align:left;}
+tr.odd_comp td.players { text-align:left;}
+tr.odd_comp th.players { text-align:left;}
+
+#comp-stats td {background-color:white;}
+#comp-stats td.label {border-bottom:1px dotted #d7863e;border-top:1px solid 
+white;margin-right:2px;background-color:#F7F7F7;color:#111;}
+
+#xo-page .xo-blockszone .xo-blockcontent {
+text-align:right;
+}
+
+#xo-page .xo-blockszone .xo-blockcontent ul#player {
+background:#FFF url('../img/bg-complayermenu.png') top left repeat-x;
+list-style-type:none;
+border:#994E03 solid;
+border-width:0 1px 1px 1px;
+text-align:right;
+text-transform:uppercase;
+font-size:11px;
+letter-spacing:1px;
+padding:8px 20px 7px 0;
+margin:0 0 10px 10px;
+}
+
+#xo-page .xo-blockszone .xo-blockcontent ul#player li {
+display:inline;
+text-align:right;
+list-style-type:none;
+background-color:transparent;
+}
+#xo-page .xo-blockszone .xo-blockcontent ul#player li a {
+background-color:transparent;
+margin-left:10px;
+padding-left:15px;
+border-left:solid 1px #D06800;
+}
+
+#xo-page .xo-blockszone .xo-blockcontent ul#player li a.first {
+border-left:none;
+}
+
+#xo-page .xo-blockszone .xo-blockcontent ul#player li a:hover {color:#FFA000;}
+
+a.xo-counterpage {font-size:14px;}
+strong.xo-pagact {font-size:14px;}
+
+

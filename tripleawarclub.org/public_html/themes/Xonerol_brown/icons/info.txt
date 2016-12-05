@@ -1,0 +1,23 @@
+/* english */
+- To put here, only additional images of type: icons (box mail, configuration, profile, logout,…), bullets, flags, microformats, action (to publish, erase, add, following, preceding, zoom, rss,…)
+
+/* french */
+- Mettre ici, uniquement les images annexes de type : icônes (messagerie, configuration, profil, déconnexion, ...), puces, drapeaux, microformats, action (éditer, effacer, ajouter, suivante, précédente, zoom, rss, ...)
+
+/* spanish */
+- Para poner aquí, solamente imágenes adicionales del tipo: iconos (correo de la caja, configuración, perfil, fin de comunicación,…), bullets, banderas, microformats, acción (publicar, borrar, agregar, siguiente, el preceder, zoom, rss,…)
+
+/* portuguese */
+- Para põr aqui, somente imagens adicionais do tipo: ícones (correio da caixa, configuração, perfil, saída,…), bullets, bandeiras, microformats, ação (para publicar, para apagar, adicionar, seguimento, precedência, zoom, rss,…)
+
+/* italian */
+- Per mettere qui, soltanto immagini supplementari di tipo: icone (posta della casella, configurazione, profilo, termine attività,…), bullets, bandierine, microformats, azione (per pubblicare, cancellare, aggiungere, seguire, precedere, zoom, rss,…)
+
+/* german */
+- Sich hier setzen, nur zusätzliche Bilder des Typen: Ikonen (Kastenpost, Konfiguration, Profil, Logout,…), Gewehrkugeln, Markierungsfahnen, microformats, Maßnahmen (zu veröffentlichen, zu löschen, Folgen addieren, Vorangehen, lautes Summen, rss,…)
+
+/* Dutch */
+- Om hier te zetten, slechts extra beelden van type: pictogrammen (doospost, configuratie, profiel, logout,…), kogels, vlaggen, microformats, actie (om te publiceren, te wissen, toe te voegen, het volgende, het voorafgaan, gezoem, rss,…)
+
+/* polish */
+- Tutaj, tylko dodatkowy wizerunek typ: ikona (pudelkowaty poczta, konfiguracja, profil, logout,…), pocisk, flaga, microformats, akcja (, dodawac, zoom, rss,…)

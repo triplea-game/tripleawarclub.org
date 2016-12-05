@@ -1,0 +1,23 @@
+/* english */
+- to put here your additional Javascript concerning the theme
+
+/* french */
+- mettre ici vos javascripts additionnels concernant le thème
+
+/* spanish */
+- para poner aquí su Javascript adicional referente al tema
+
+/* portuguese */
+- para põr aqui seu Javascript adicional a respeito do tema
+
+/* italian */
+- per mettere qui il vostro Javascript supplementare riguardo al tema
+
+/* german */
+- Ihr zusätzliches Javascript hinsichtlich des Themas hier setzen
+
+/* Dutch */
+- om uw extra Javascript betreffende het thema hier te zetten
+
+/* polish */
+- tutaj twój dodatkowy JavaScript the temat

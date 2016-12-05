@@ -1,0 +1,208 @@
+/* Thanks to Snow77, Skalpa and Leostotch for the initial work, Dugris for help  */
+/* Mor.pho.GEN.e.sis version 2.1 by kris (http://www.xoofoo.org and http://www.frxoops.org) */
+/* file name : content-data.css - 12 01 2008 */
+/*=============  Style for accessibilitybar.html ============= */
+#xo-accessibilitybar {
+	display:							block;
+	float: 							right;
+	padding-top: 					2px;
+	padding-right:					1em;
+}
+#xo-accessibilitybar a {
+	text-decoration: 				none;
+	border: 							none;
+}
+#xo-accessibilitybar img {
+	width: 							24px;
+	height: 							24px;
+}
+/*============== Styles for userbar_siteclosed.html =================*/
+#xo-userbar_siteclosed {
+	display:							block;
+	text-align: center;
+	background-color: 			transparent;
+	padding-top: 					2px;
+	padding-right:					1em;
+	color:							#666;
+}
+#xo-userbar_siteclosed form {
+	display:							inline;
+	padding:							0;
+}
+#xo-userbar_siteclosed button {
+	margin: 							0 -3px;
+	background-color:				transparent;
+	background-image: 			none;
+	color: 							inherit;
+	padding:							0;
+	border:							none;
+}
+#xo-userbar_siteclosed button img {
+	width: 							22px;
+	height: 							22px;
+ }
+ #xo-userbar_siteclosed button:hover {
+ 	border: 							0 !important;
+ }
+#xo-userbar_siteclosed input {
+	width: 							80px;
+	background-color: 			#fff;
+	color:							#333;
+}
+/*============= Style for globalnav.html ================*/
+#xo-globalnav {
+    position: absolute;
+    right: 0em;
+    bottom: 0em;
+}
+#xo-globalnav ul {
+    list-style: none;
+}
+#xo-globalnav li {
+    float: left;
+}
+#xo-globalnav li a {
+    margin-left: 0.5em;
+    display: block;
+    padding: 1.1em 1.4em 1.0em 1.4em;
+    background: #fff url(../img/n4.gif) repeat-x;
+    border: solid 1px #fff;
+    color: #616161;
+    font-weight: bold;
+    font-size: 1.0em;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+#xo-globalnav li a:hover {
+    background: #CC6C0C url(../img/n3.gif) repeat-x;
+    color: #fff;
+    border: solid 1px #AA7036;
+}
+#xo-globalnav li a.menu_active {
+    background: #CC6C0C url(../img/n3.gif) repeat-x;
+    color: #fff;
+    border: solid 1px #AA7036;
+}
+/*============== Styles for system_siteclosed.html =================*/
+#xo-siteclose {
+	width:							400px;
+	margin:							20px auto;
+	background-color:				#fff;	
+	padding:							30px;
+	color:							#562F00;
+	font-size: 						1.2em;
+	font-weight: 					bold;
+	text-align: 					center;
+	border:							1px solid #666;
+}
+/*============== Styles for system_redirect.html =================*/
+#xo-redirect {
+	width:							780px;	
+	margin:							20px auto;
+	padding:							1em;
+	font-weight:					bold;
+	text-align:						center;
+}
+#xo-redirect .notreload {
+	height:							28px;
+	background-color:				inherit;
+	padding-top:					2px;
+	color:							#562F00;
+}
+#xo-redirect .notreload a {
+	background-color: 			inherit;
+	color:							#AA7036;
+	font-weight:					bold;
+	text-decoration: 				none;
+}
+#xo-redirect .message {
+	min-height:						60px;
+	background-color: 			inherit;	
+	padding:							1em;
+	color:							#562F00;
+	font-size:						1.2em;
+	text-align:						center;
+	border:		 					solid 1px #666;
+}
+#xo-redirect .message img{	padding:	1em;}
+
+/*======== others float class ======== */
+.floatleft {
+	float: 							left;
+	margin-top: 					1em;
+	margin-right : 				1em;
+	padding-left: 					4px;
+	border: 							0;
+}
+.floatright {
+	float: 							right;
+	margin: 							0 0 10px 10px;
+	padding: 						2px;
+	border: 							0;
+}
+/*========  others alignment class ======== */
+.left   { text-align: 			left; }
+.right  { text-align: 			right; }
+.center { text-align: 			center;	}
+.justify { text-align:			justify; }
+.middle { vertical-align: 		middle;}
+.top { vertical-align: 			top;}
+.bottom { vertical-align: 		bottom;}
+/*========  others width class ======== */
+.width100 { width: 				100%; }
+.width95 {width:					95%}
+.width75 { width: 				75%; }
+.width50 { width: 				50%; }
+.width33 { width: 				33%; }
+.width25 { width: 				25%; }
+.width20 { width: 				20%; }
+
+/* ========= others font class ========== */
+.small {	font-size: .92em;}
+.normal { font-size: 1em;}
+.big { font-size: 1.17em;}
+.maxi { font-size: 1.5em;}
+
+.bold { font-weight: bold;}
+.italic {font-style: italic;}
+/*========  others display class ======== */
+.clear { clear: 					both; }
+.block { display: 				block; }
+.hide  { display: 				none; }
+/* ======== others hypertext links ================ */
+a.printable, a.pdf, a.friend {
+	width:							22px;
+	height:							22px;
+	background-repeat:			no-repeat;
+	background-position:			left top;
+	text-indent:					-1000em;
+}
+a.printable	{	background-image: url(../icons/action/printable.png); }
+a.pdf	{	background-image: url(../icons/action/pdf.png); }
+a.friend	{	background-image: url(../icons/action/friend.png); }
+
+/*======== body for tinyeditor/inbetwen module ======== */
+body.mceContentBody {
+	background-color: 			#fff;
+	background-image: 			none;
+	color: 							#333;
+}
+/* ======== for accessibility ================ */
+/*a[hreflang]:after {
+	content: "\0000a0[alt+" attr(hreflang) "]";
+}
+a[accesskey]:after {
+	content: "\0000a0[alt+" attr(accesskey) "]";
+}*/
+
+/* -- signature in CBB/NewBB -- */
+.signature {
+	font-style: italic;
+	font-size: .9em;
+}
+
+/* ============ Style for notification form ============ */
+span.notification_title {
+	font-size:.9em;
+	font-weight:bold;
+}

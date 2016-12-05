@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+	<!-- paramètres pour le positionnement des blocs haut et bas -->
+	<{* Center blocks display order valid values are:  lrc (left right / center) lcr (left center right) clr (center / left right)	*}>
+	<{assign var=theme_top_order value=clr}>
+	<{assign var=theme_bottom_order value=clr}>
+<!-- Theme name -->
+	<{assign var=theme_name value=$xoTheme->folderName}>
+<!-- Directory html blocks files or additional html files by include -->
+	<{assign var=theme_name value=$xoTheme->folderName|cat:'/xotpl'}>
+<!-- Directory html plugins files -->	
+	<{assign var=theme_plugin value=$xoTheme->folderName|cat:'/xoplugins'}>
+<!-- Metas, Titles, and Style Sheets -->
+	<{includeq file="$theme_name/xometas.html"}>
+<!-- Additionals Scripts -->
+	<{includeq file="$theme_name/xoscripts.html"}>
+</head>
+<body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
+<{if $xoBlocks.canvas_left and $xoBlocks.canvas_right}><{assign var=columns_layout value='threecolumns-layout'}>
+<{elseif $xoBlocks.canvas_left}><{assign var=columns_layout value='leftcolumn-layout'}>
+<{elseif $xoBlocks.canvas_right}><{assign var=columns_layout value='rightcolumn-layout'}>
+<{/if}>
+<div id="xo-wrapper" class="<{$xoops_dirname}>">
+	<div id="xo-bgstatic" class="<{$xoops_dirname}>"></div>
+	<div id="xo-canvas"<{if $columns_layout}> class="<{$columns_layout}>"<{/if}>>
+
+		<!-- début du HAUT DE PAGE -->
+		<div id="xo-header" class="<{$xoops_dirname}>">
+
+
+      	<!-- include du HEADER avec logo et bannière -->
+			<!-- vérification si l'affichage de la bannière est activée ou non dans l'administration du site -->
+				<{includeq file="$theme_name/xobanner_commercial.html"}>
+			<!-- fin de la condition d'affichage en fonction de l'activation de la bannière -->
+
+		</div>
+		<!-- fin du haut de page -->
+
+      <!-- zone CONTENU -->
+		<!-- Ne pas modifier la partie ci-dessous, c'est supposé être l'architecture standard que chacun doit utiliser -->
+		<div id="xo-canvas-content" class="<{$xoops_dirname}>">
+			<!--<{if $xoBlocks.canvas_top}>
+				<{includeq file="$theme_name/blockszone.html" blocks=$xoBlocks.canvas_top
+					zoneClass='' zoneId='xo-canvas-header'
+					}>
+			<{/if}>-->
+			
+			<!-- Star Script redirect -->
+			<{includeq file="$theme_name/userbar_siteclosed.html"}><br />
+	<div id="xo-siteclose"><{$lang_siteclosemsg}></div>		
+
+		<!-- End script redirect -->
+
+			
+		</div>
+		<!-- include du PIED DE PAGE -->
+		<{includeq file="$theme_name/xofooter.html"}>
+	</div>
+	<!--{xo-logger-output}-->
+</div>
+</body>
+</html>
