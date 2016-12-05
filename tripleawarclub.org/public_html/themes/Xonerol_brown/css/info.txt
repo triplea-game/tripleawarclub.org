@@ -1,0 +1,23 @@
+/* english */
+- To put your style sheets CSS here
+
+/* french */
+- Mettre ici vos feuilles de style CSS
+
+/* spanish */
+- Para poner sus hojas de estilo CSS aquí
+
+/* portuguese */
+- Para põr aqui suas folhas de estilo CSS
+
+/* italian */
+- Per per porre i vostri fogli CSS di stile qui
+
+/* german */
+- Zu Ihre Artblätter CSS hier setzen
+
+/* Dutch */
+- Om uw stijlbladen CSS hier te zetten
+
+/* polish */
+- Twój styl przescieradlo CSS tutaj

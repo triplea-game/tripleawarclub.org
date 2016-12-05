@@ -1,0 +1,27 @@
+<h1>HELLO</h1><form action="<{xoAppUrl /user.php op=login}>" method="post">
+ <div align="center">V&eacute;rifier la compatibilit&eacute; de votre navigateur et parefeu <a href="<{$xoops_url}>/browser_check/"><strong>ici</strong></a></div>
+ <fieldset>
+  <legend><{$lang_login}></legend>
+    <{$lang_username}>
+	<input type="text" name="uname" size="26" maxlength="25" value="<{$usercookie}>" /><br />
+    <{$lang_password}>
+	<input type="password" name="pass" size="21" maxlength="32" />&nbsp;&nbsp;
+    <input type="hidden" name="op" value="login" />
+    <input type="hidden" name="xoops_redirect" value="<{$redirect_page}>" />
+    <input class="xo-formbuttons" type="submit" value="<{$lang_login}>" />
+    <a name="lost"></a>
+<p><{$lang_notregister}></p>
+ </fieldset>
+ </form>
+<br />
+<form action="<{xoAppUrl /lostpass.php op=mailpasswd}>" method="post">
+<fieldset>
+<legend><{$lang_lostpassword}></legend>
+	<{$lang_noproblem}><br />
+	<{$lang_youremail}>
+	<input type="text" name="email" size="26" maxlength="60" />&nbsp;&nbsp;
+	<input type="hidden" name="op" value="mailpasswd" />
+	<input type="hidden" name="t" value="<{$mailpasswd_token}>" />
+	<input class="xo-formbuttons" type="submit" value="<{$lang_sendpassword}>" />
+</fieldset>
+</form>

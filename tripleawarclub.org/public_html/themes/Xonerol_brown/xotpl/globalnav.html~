@@ -1,0 +1,13 @@
+    <div id="xo-globalnav">
+      <ul>
+        <li><a href="<{xoAppUrl /}>" <{if $homeStyle}> class="menu_active"<{/if}>>Home</a></li>
+        <li><a href="<{xoAppUrl modules/AMS/}>" class="menu<{if $xoops_dirname == "AMS"}>_active<{/if}>">Strategy</a></li> 
+        <li><a href="<{xoAppUrl modules/newbb/}>" class="menu<{if $xoops_dirname == "newbb"}>_active<{/if}>">Forums</a></li>
+        <li><a href="<{xoAppUrl modules/comp/}>" class="menu<{if $xoops_dirname == "comp"}>_active<{/if}>">Ladder</a></li>      
+	<li><a href="http://sites.google.com/site/tripleaerniebommel/home/links" class="menu">Links</a></li>
+<!--        <li><a href="<{xoAppUrl modules/wflinks/}>" class="menu<{if $xoops_dirname == "wflinks"}>_active<{/if}>">Links</a></li>-->
+      <!-- <li><a href="<{xoAppUrl modules/smartfaq/}>" class="menu<{if $xoops_dirname == "smartfaq"}>_active<{/if}>">FAQ</a></li>-->
+<!-- Example -->
+ <!-- <li><a href="<{xoAppUrl modules/my_module/}>" class="menu<{if $xoops_dirname == "my_module"}>_active<{/if}>">My module</a></li> -->
+      </ul>
+    </div>

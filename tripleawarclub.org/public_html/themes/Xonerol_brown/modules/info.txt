@@ -1,0 +1,23 @@
+/* english */
+- Directory for the overload of the theme (see item on xoops.org)
+
+/* french */
+- Répertoire pour la surcharge du thème (voir article sur frxoops.org)
+
+/* spanish */
+- Directorio para la sobrecarga del tema (véase el item en xoops.org)
+
+/* portuguese */
+- Diretório para a sobrecarga do tema (ver o item em xoops.org)
+
+/* italian */
+- Directory per il sovraccarico del tema (vedere il punto su xoops.org)
+
+/* german */
+- Verzeichnis für die Überlastung des Themas (Punkt auf xoops.org sehen)
+
+/* Dutch */
+- Folder voor de overbelasting van het thema (zie punt op xoops.org)
+
+/* polish */
+- Ksiazka dla the przeciazenie the temat (widziec rzecz na xoops.org)

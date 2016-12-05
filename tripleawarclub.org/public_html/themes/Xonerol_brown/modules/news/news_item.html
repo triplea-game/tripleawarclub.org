@@ -1,0 +1,24 @@
+<table cellpadding="0" cellspacing="0" class="item">
+<tr>
+	<td>
+		<table cellpadding="0" cellspacing="0" width="98%">
+		<tr>
+			<td class="itemHead">
+				<span class="itemTitle">
+					<a href="<{$xoops_url}>/modules/news/index.php?storytopic=<{$story.topicid}>"><{$story.topic_title}></a> : <{$story.news_title}>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="itemInfo"><{if $story.files_attached}><{$story.attached_link}>&nbsp;<{/if}><{if $story.poster != ''}><span class="itemPoster_news"><{$lang_postedby}> <{$story.poster}></span><{/if}> <span class="itemPostDate"><{$lang_on}> <{$story.posttime}></span> (<span class="itemStats"><{$story.hits}> <{$lang_reads}></span>) <{$news_by_the_same_author_link}></td>
+		</tr>
+		<tr>
+			<td class="itemBody"><{$story.imglink}><p class="itemText"><{$story.text}></p></td>
+		</tr>
+		<tr>
+			<td class="itemFoot"><span class="itemAdminLink"><{$story.adminlink}></span><{if $rates}><b><{$lang_ratingc}></b> <{$story.rating}> (<{$story.votes}>) - <a href="<{$xoops_url}>/modules/news/ratenews.php?storyid=<{$story.id}>" rel="nofollow"><{$lang_ratethisnews}></a> - <{/if}><span class="itemPermaLink_news"><{$story.morelink}></span></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>

@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<head>
+<title>template</title>
+
+
+  <!-- Blueprint Grid Framework CSS -->
+  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+  <!--[if lt IE 8]><link rel="stylesheet" href="/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+  
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="css/blueprint/plugins/tabs/screen.css" type="text/css" media="screen" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/homepage.css" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script type='text/javascript' src='js/jquery-1.4.2.min.js'></script>
+
+  <!-- Sliding login -->
+  <link rel="stylesheet" href="css/slide.css" type="text/css" media="screen" />
+
+  	<!-- PNG FIX for IE6 -->
+  	<!-- http://24ways.org/2007/supersleight-transparent-png-in-ie6 -->
+	<!--[if lte IE 6]>
+		<script type="text/javascript" src="js/pngfix/supersleight-min.js"></script>
+	<![endif]-->
+
+  <!-- Sliding effect -->
+  <script src="js/slide.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<div id='header' style="height:124px;display:block;border-bottom:1px #FFF solid;">
+
+	<div id="header-content" style="height:122px;border-bottom:2px #381e00 solid;">
+
+	content goes here
+
+	</div>
+
+</div>
+
+<div id="row1">
+
+	<div id="toppanel">
+
+		<div class='container '>
+
+			<div id="panel" class='column span-24'>
+
+				<div class="column span-12">
+					<!-- Login Form -->
+					<form class="login" action="#" method="post">
+
+						Username: <input class="field" type="text" name="log" id="log" value="" size="23" />
+						Password: <input class="field" type="password" name="pwd" id="pwd" size="23" />
+						<input type="submit" name="submit" value="Login &raquo;" class="bt_login" />
+
+						<hr />	
+						<a href="#">Lost your password?</a> | <input name="rememberme" type="checkbox" checked="checked" value="forever" style="vertical-align:top;" /> &nbsp;Remember me
+
+						
+
+					</form>
+				</div>
+
+				<div class="column last span-12">			
+					<!-- Register Form -->
+					<form class="register" action="#" method="post">				
+						Username: <input class="field" type="text" name="signup" id="signup" value="" size="23" />
+						Email Address: <input class="field" type="text" name="email" id="email" size="23" />
+						<input type="submit" name="submit" value="Register &raquo;" class="bt_register" />
+<hr/>
+						<span class="comment">A password will be e-mailed to you.</span>
+						
+					</form>
+				</div>
+
+			</div><!-- end panel -->
+
+			<div class="tab">
+				<ul class="login">
+			    	<li class="left">&nbsp;</li>
+				<li>Hello Guest!</li>
+				<li class="sep">|</li>
+				<li id="toggle">
+					<a id="open" class="open" href="#">Log In / Register</a>
+					<a id="close" style="display: none;" class="close" href="#">Close Panel</a>			
+				</li>
+			    	<li class="right">&nbsp;</li>
+				</ul> 
+			</div> <!-- end tab -->
+	
+		</div> <!--end container -->
+
+	</div> <!--end top panel -->
+
+
+
+
+	<div class="container"> <!-- begin blueprint grid -->
+
+	<div class='column span-24 last' id="content">
+
+
+		<div class='column span-12' id='forums'>
+
+			<div class='box'>
+		
+				<div class='column span-6'>
+
+					<h2><a href="http://www.tripleawarclub.org/modules/newbb/">Forums &raquo;</a></h2>
+
+				</div>
+				<div class='column span-5 last'>
+
+					<form action="http://www.tripleawarclub.org/modules/newbb/search.php" method="post" name="search" id="search">
+					<input name="term" id="term" type="text" value="Search Forums.." onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Search Forums..':this.value;"/>
+					<input type="hidden" name="forum" id="forum" value="all" />
+					<input type="hidden" name="sortby" id="sortby" value="p.post_time desc" />
+					<input type="hidden" name="searchin" id="searchin" value="both" />
+					<input type="image" src="icons/page_white_find.png" name="submit" value="submit" style="vertical-align:middle;"/>
+					</form>
+
+				</div>
+	
+				<hr/>
+
+				<ul id="tabs" class='forums'>
+					<li><a href='#latestposts' class='selected'>Latest Posts</a></li>
+					<li><a href='#forumslist'>Forums List</a></li>
+				</ul>
+
+				<div id="latestposts">
+					<table id="latestposts" class="simple">
+						<tr class="headings">
+						<td>Thread</td>
+						<td>Replies</td>
+						<td>Latest Post</td>
+						<td>Views</td>
+						<td>Forum</td>
+						</tr>
+						<tr>
+						<td><a href="#">Sample post</a> <br/> by <a href="#">Bung</a></td>
+						<td>64</td>
+						<td>Mar 22 <br/> <a href="#">Jack Black</a></td>
+						<td>656</td>
+						<td><a href="#">The War Room</a></td>
+						</tr>
+						<tr class="row2">
+						<td><a href="#">Sample post</a> <br/> by <a href="#">Bung</a></td>
+						<td>64</td>
+						<td>Mar 22 <br/> <a href="#">Jack Black</a></td>
+						<td>656</td>
+						<td><a href="#">The War Room</a></td>
+						</tr>
+						<tr>
+						<td><a href="#">Sample post</a> <br/> by <a href="#">Bung</a></td>
+						<td>64</td>
+						<td>Mar 22 <br/> <a href="#">Jack Black</a></td>
+						<td>656</td>
+						<td><a href="#">The War Room</a></td>
+						</tr>
+						<tr class="row2">
+						<td><a href="#">Sample post</a> <br/> by <a href="#">Bung</a></td>
+						<td>64</td>
+						<td>Mar 22 <br/> <a href="#">Jack Black</a></td>
+						<td>656</td>
+						<td><a href="#">The War Room</a></td>
+						</tr>
+						<tr>
+						<td><a href="#">Sample post</a> <br/> by <a href="#">Bung</a></td>
+						<td>64</td>
+						<td>Mar 22 <br/> <a href="#">Jack Black</a></td>
+						<td>656</td>
+						<td><a href="#">The War Room</a></td>
+						</tr>
+						<tr class="row2">
+						<td><a href="#">Sample post</a> <br/> by <a href="#">Bung</a></td>
+						<td>64</td>
+						<td>Mar 22 <br/> <a href="#">Jack Black</a></td>
+						<td>656</td>
+						<td><a href="#">The War Room</a></td>
+						</tr>
+					</table>
+				</div> <!-- latest -->
+
+			<div id="forumslist">
+				<table id="forumslist" class="simple">
+					<tr class="headings">
+					<td>Name</td>
+					<td>Total Posts</td>
+					<td>Latest Post</td>
+					</tr>
+					<tr>
+					<td><a href="#">The War Room</a></td>
+					<td>64</td>
+					<td>Mar 22 <br/> <a href="#">Jack Black</a> in <a href="#">Fucking Around</a></td>
+					</tr>
+					<tr class="row2">
+					<td><a href="#">The War Room</a></td>
+					<td>64</td>
+					<td>Mar 22 <br/> <a href="#">Jack Black</a> in <a href="#">Fucking Around</a></td>
+					</tr>
+					<tr>
+					<td><a href="#">The War Room</a></td>
+					<td>64</td>
+					<td>Mar 22 <br/> <a href="#">Jack Black</a> in <a href="#">Fucking Around</a></td>
+					</tr>
+					<tr class="row2">
+					<td><a href="#">The War Room</a></td>
+					<td>64</td>
+					<td>Mar 22 <br/> <a href="#">Jack Black</a> in <a href="#">Fucking Around</a></td>
+					</tr>
+					<tr>
+					<td><a href="#">The War Room</a></td>
+					<td>64</td>
+					<td>Mar 22 <br/> <a href="#">Jack Black</a> in <a href="#">Fucking Around</a></td>
+					</tr>
+					<tr class="row2">
+					<td><a href="#">The War Room</a></td>
+					<td>64</td>
+					<td>Mar 22 <br/> <a href="#">Jack Black</a> in <a href="#">Fucking Around</a></td>
+					</tr>
+				</table>
+			</div> <!-- forumlist -->
+
+		</div> <!-- end box -->
+
+		</div> <!-- end forums -->
+
+		<div class='column span-12 last' id='ladder'>
+
+			<div class='box'>
+
+				<div class='column span-3'>
+
+					<h2><a href="#">Ladder &raquo;</a></h2>
+
+				</div>
+				<div class='column span-7 last'>&nbsp;</div>
+	
+				<hr/>
+
+				<ul id="tabs" class='ladder'>
+					<li><a href='#revised' class='selected'>Revised</a></li>
+					<li><a href='#anniversary'>Anniversary</a></li>
+					<li><a href='#classic'>Classic</a></li>
+				</ul>
+	
+				<div id='revised' class="ladder">
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				</div>
+
+	
+				<div id='anniversary' class="ladder">
+		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+				</div>
+	
+				<div id='classic' class="ladder">
+		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+				</div>
+	
+			</div>	<!-- end box -->
+
+		</div>	<!-- end ladder -->
+
+</div> <!-- end content -->
+</div> <!-- end container-->
+</div> <!-- end row 1 -->
+
+<div id="row2">
+
+	<div class="container"> <!-- begin blueprint grid -->
+
+		<div class='column span-24 last' id="what">
+		<p><b>TripleA</b> is an Open-Source Java strategy game engine. The <b>War Club</b> is a place to play on an Axis & Allies ladder and/or find PBEM games.</p>
+		</div>
+		<hr/>
+		<div class='column span-8' id='started'>
+			<div class='box bg1'>
+			<h2>Get Started!</h2>
+				<ul>
+				<li><a href="https://www.triplea-game.org/download/">Download TripleA</a> from <a href="http://www.triplea-game.org">www.triplea-game.org</a><!--<br/><span class="comment">We recommend the "all_platforms" zip file.</span>--></li>
+				<li><a href="http://www.tripleawarclub.org/modules/newbb/viewtopic.php?forum=1&post_id=941#forumpost941">Install some maps</a><br/><span class="comment">There are classic games lots of mods!</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class='column span-8' id='playing'>
+			<div class='box bg2'>
+			<h2>Get Playing!</h2>
+				<ul>
+				<li><b>The Lobby</b> - Start TripleA, press "Find Games on the Lobby server."</li>
+				<li><b>The Ladder</b> - Register here, join a ladder, edit your profile, then find opponents!</li>
+				<li><b>Play by E-Mail</b> - Find casual PBEM users in the <a href="http://www.tripleawarclub.org/modules/newbb/viewforum.php?forum=7">PBEM Forum</a>.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class='column span-8 last' id='help'>
+			<div class='box bg3'>
+			<h2>Get Help!</h2>
+				<ul>
+				<li><a href="http://www.tripleawarclub.org/modules/newbb/viewtopic.php?topic_id=131">Trooper's PBEM/Newbie guide.</a></li>
+				<li><a href="http://n2.nabble.com/tripleadev-f1671093ef1671093.html">TripleA Developer forums</a></li>
+				<li><a href="http://www.tripleawarclub.org/modules/newbb/viewtopic.php?topic_id=100&forum=1">Lobby/Forum rules.</a></li>
+				<li>Something else? <a href="http://www.tripleawarclub.org/modules/newbb/viewforum.php?forum=1">The War Room</a>.</li>
+				</li>
+			</div>
+		</div>
+
+	</div> <!-- end container -->
+
+</div> <!-- end row2 -->
+
+<div id="footer">
+
+<div class="container ">
+
+	<div class='column span-8 prepend-top' id='online'>
+		<div class='box bg1'>
+			<h2>Who's Online</h2>
+			<b>Members:</b> Bung, CBung, CBungholioP<br />
+			<b>Guests:</b> 5<br />
+		</div>
+	</div>
+
+	<div class='column span-8 prepend-top' id='sitemap'>
+		<div class='box bg2'>
+			<h2>Sitemap</h2>
+		 	<ul>
+			<li><a href="http://www.tripleawarclub.org">Home Page</a></li>
+			<li><a href="http://www.tripleawarclub.org/forum">Forums</a></li>
+			<li><a href="http://www.tripleawarclub.org/modules/comp/">Ladder</a></li>
+			<li><a href="http://www.tripleawarclub.org/register.php">Register</a></li>
+			<li><a href="http://www.tripleawarclub.org/user.php">Profile</a></li>
+			
+			</ul>
+		</div>
+	</div>
+
+	<div class='column span-8 last prepend-top' id='Links'>
+		<div class='box bg3'>
+			<h2>Links</h2>
+		 	<ul>
+			<li><a href="http://triplea.sf.net">TripleA Project</a></li>
+			<li><a href="http://www.axisandallies.wikia.org/">Axis & Allies Wiki Site</a></li>
+			<li><a href="http://sites.google.com/site/tripleaerniebommel/home">The Supply Depot</a></li>
+			<li><a href="http://www.rogercooper.com/AxisAlliesTriple-AComputerVersion.htm">Roger Cooper's Mods</a></li>
+			<li><a href="http://www.harrisgamedesign.com/">Larry Harris Game Design</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<hr/>
+	
+	<p class="copy">&copy; Copyright 2009-2010 <a href="http://www.tripleawarclub.org">tripleawarclub.org</a></p>
+
+</div> <!-- end container -->
+
+</div> <!-- end footer -->
+
+<script type="text/javascript">
+	$("#ladder > div > div").hide(); 
+	$("#ladder > div > div").eq(0).show();
+	$("#ladder > div > div").eq(1).show();
+	$("#ladder > div > div").eq(2).show();
+	$("#forums > div > div").hide(); 
+	$("#forums > div > div").eq(0).show(); 
+	$("#forums > div > div").eq(1).show(); 
+	$("#forums > div > div").eq(2).show(); 
+  $("ul.ladder a").click( 
+  	function() { 
+  		$("ul.ladder a.selected").removeClass('selected'); 
+  		$("#ladder > div > div").hide();
+		$("#ladder > div > div").eq(0).show(); 
+		$("#ladder > div > div").eq(1).show(); 
+  		$(""+$(this).attr("href")).fadeIn('slow'); 
+  		$(this).addClass('selected'); 
+  		return false; 
+  	}
+  );
+ $("ul.forums a").click( 
+  	function() { 
+  		$("ul.forums a.selected").removeClass('selected'); 
+  		$("#forums > div > div").hide();
+		$("#forums > div > div").eq(0).show(); 
+		$("#forums > div > div").eq(1).show(); 
+  		$(""+$(this).attr("href")).fadeIn('slow'); 
+  		$(this).addClass('selected'); 
+  		return false; 
+  	}
+  );
+</script>
+
+</body>
