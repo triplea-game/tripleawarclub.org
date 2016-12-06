@@ -11,3 +11,7 @@ PRs are welcome.
 ## Dev Setup
 
 We could use some help documenting setup instructions. Should be a standard apache deployment of the 'tripleawarclub.org' folder to `/var/www/` . DB will need to be setup. DB creds are in two files: secure.php and mainfile.php
+
+## Website Future
+
+There have been a number of conversations about the warclub website. Veqryn's advice is to consider upgrading to a more modern tech stack. Meanwhile, there is interest in keeping the current website features working.
