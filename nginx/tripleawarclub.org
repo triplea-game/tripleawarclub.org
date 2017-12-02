@@ -31,7 +31,11 @@ server {
     location / {
         try_files $uri $uri/ =404;
     }
-	
+
+    location ~ dice/(keys/)?[^/]+\.(key|dat)$ {
+      deny all;
+    }
+
     location ~ .*\.php$ {
         fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
         include snippets/fastcgi-php.conf;
