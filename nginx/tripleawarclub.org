@@ -44,18 +44,6 @@ server {
         }
     }
 
-    location /dice-staging/ {
-        location ~ \.php$ {
-            fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
-            include snippets/fastcgi-php.conf;
-            include marti_staging_fastcgi_params;
-        }
-
-        location ~ \.(key|dat)$ {
-            deny all;
-        }
-    }
-
     location ~ .*\.php$ {
         fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
         include snippets/fastcgi-php.conf;
