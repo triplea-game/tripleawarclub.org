@@ -2,7 +2,7 @@ server {
     listen 80;
     listen [::]:80;
     server_name tripleawarclub.org www.tripleawarclub.org;# dice.tripleawarclub.org *.tripleawarclub.org;
-    rewrite     ^   https://$host$request_uri? permanent;
+    return 301 https://forums.triplea-game.org;
 }
 server {
     listen 443 ssl http2;
@@ -29,11 +29,6 @@ server {
     index  index.html index.htm index.php;
 	
     location / {
-        try_files $uri $uri/ =404;
-    }
-
-    location ~ .*\.php$ {
-        fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
-        include snippets/fastcgi-php.conf;
+        return 301 https://forums.triplea-game.org;
     }
 }
