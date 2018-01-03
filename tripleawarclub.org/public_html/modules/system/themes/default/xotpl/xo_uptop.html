@@ -1,1 +1,0 @@
-<div id="xo-uptop">&#124;&#32;<a href="#" class="tooltip" title="<{$smarty.const._OXYGEN_UPTOP}>"><{$smarty.const._OXYGEN_UPTOP}></a>&#32;&#124;</div>

@@ -1,7 +1,0 @@
-<div id="xo-footer" class="<{$xoops_dirname}>">
-<!-- footer infos defined in the preferences of the site -->
-
-Powered by <a href="http://xoops.sourceforge.net/" target="_blank">XOOPS</a> | theme modified from <a href="http://www.xoopsland.com/modules/extgallery/public-photo.php?photoId=11" target="_blank">xoopsland</a>
-
-<!--  end  footer infos defined in the preferences of the site -->
-</div>

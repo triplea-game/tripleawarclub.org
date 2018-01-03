@@ -1,9 +1,0 @@
-<div class="CPbigTitle" style="background-image: url(<{$theme_img}>/modules.png)"><{$smarty.const._AD_INSTALLEDMODULES}></div>
-    <div class="cpiconmodules">
-        <{foreach item=mod from=$modules}>
-        <a class="tooltip" href="<{$mod.link}>" title="<{$mod.title}>">
-        <img src='<{$mod.icon|default:"$theme_img/modules.png"}>' alt="<{$mod.title}>" />
-        <span><{$mod.title}></span>
-        </a>
-        <{/foreach}>
-</div>
