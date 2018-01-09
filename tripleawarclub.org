@@ -1,7 +1,7 @@
 server {
     listen 80;
     listen [::]:80;
-    server_name tripleawarclub.org www.tripleawarclub.org;# dice.tripleawarclub.org *.tripleawarclub.org;
+    server_name tripleawarclub.org www.tripleawarclub.org;
     return 301 https://forums.triplea-game.org;
 }
 server {
