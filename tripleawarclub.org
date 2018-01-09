@@ -22,9 +22,6 @@ server {
     ssl_prefer_server_ciphers on;
     ssl_dhparam /etc/dhparam/dhparams.pem;
 
-    access_log /usr/share/nginx/html/tripleawarclub.org/logs/access.log;
-    error_log /usr/share/nginx/html/tripleawarclub.org/logs/error.log;
-    
     location /.well-known {
         alias /usr/share/nginx/html/tripleawarclub.org/public_html/.well-known;
     }
