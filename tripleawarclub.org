@@ -8,7 +8,7 @@ server {
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
-    server_name tripleawarclub.org www.tripleawarclub.org *.tripleawarclub.org;
+    server_name tripleawarclub.org www.tripleawarclub.org;
 
     ssl_certificate /etc/letsencrypt/live/tripleawarclub.org/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/tripleawarclub.org/privkey.pem;
