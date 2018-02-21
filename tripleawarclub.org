@@ -2,7 +2,14 @@ server {
     listen 80;
     listen [::]:80;
     server_name tripleawarclub.org www.tripleawarclub.org;
-    return 301 https://forums.triplea-game.org;
+
+    location /.well-known {
+        alias /usr/share/nginx/html/tripleawarclub.org/public_html/.well-known;
+    }
+
+    location / {
+        return 301 https://forums.triplea-game.org;
+    }
 }
 
 server {
@@ -23,11 +30,5 @@ server {
     ssl_prefer_server_ciphers on;
     ssl_dhparam /etc/dhparam/dhparams.pem;
 
-    location /.well-known {
-        alias /usr/share/nginx/html/tripleawarclub.org/public_html/.well-known;
-    }
-
-    location / {
-        return 301 https://forums.triplea-game.org;
-    }
+    return 301 https://forums.triplea-game.org;
 }
